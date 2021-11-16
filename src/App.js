@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -6,6 +6,8 @@ function App() {
   // information to conserve between re-renders
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
+
+  const [isDrawing, setIsDrawing] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -22,15 +24,29 @@ function App() {
     contextRef.current = context;
   }, []);
 
-  const startDrawing = () => {
-
+  // triggered when user presses down on the mouse
+  const startDrawing = ({ nativeEvent }) => {
+    const { offsetX, offsetY } = nativeEvent;
+    contextRef.current.beginPath();
+    contextRef.current.moveTo(offsetX, offsetY);
+    setIsDrawing(true);
   };
 
   const finishDrawing = () => {
-
+    contextRef.current.closePath();
+    setIsDrawing(false);
   };
 
-  const draw = () => {
+  const draw = ({ nativeEvent }) => {
+    // only draw if the mouse is pressed down
+    // use this Word Clause format to decrease nesting
+    if (!isDrawing) {
+      return;
+    }
+
+    const { offsetX, offsetY } = nativeEvent;
+    contextRef.current.lineTo(offsetX, offsetY);
+    contextRef.current.stroke();
 
   };
 
