@@ -17,4 +17,9 @@ body {
     min-height: 100%;
 }
 
+#canvas-container {
+  display: flex; 
+  justify-content: center;
+}
+
 `;

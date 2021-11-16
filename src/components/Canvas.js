@@ -15,10 +15,10 @@ const Canvas = ({ className }) => {
     canvas.style.height = `${window.innerHeight * 0.8}px`;
     
     const context = canvas.getContext('2d');
-    context.scale(1,1);
+    context.scale(1.26,1.26);
     context.lineCap = 'round';
-    context.strokeStyle = 'black'; //NOTE: user will be able to choose this later
-    context.lineWith = 10; // NOTE: user will be able to choose this later
+    context.strokeStyle = 'purple'; //NOTE: user will be able to choose this later
+    context.lineWith = 15; // NOTE: user will be able to choose this later
     contextRef.current = context;
   }, []);
 
@@ -49,7 +49,7 @@ const Canvas = ({ className }) => {
   };
 
   return (
-    <canvas
+      <canvas
       className={className}
       onMouseDown={startDrawing}
       onMouseUp={finishDrawing}

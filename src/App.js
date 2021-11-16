@@ -5,10 +5,12 @@ import { GlobalStyles } from './components/styled/GlobalStyles.style';
 function App() {
 
   return (
-    <>
+    <div className="app">
       <GlobalStyles />
-      <StyledCanvas />
-    </>
+      <div id="canvas-container">
+        <StyledCanvas />
+      </div>
+    </div>
   )
 }
 
