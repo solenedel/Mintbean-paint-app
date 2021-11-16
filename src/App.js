@@ -1,10 +1,10 @@
 import React from 'react';
-import Canvas from './components/Canvas';
+import { StyledCanvas } from './components/styled/Canvas.style';
 
 function App() {
 
   return (
-    <Canvas />
+    <StyledCanvas />
   )
 }
 

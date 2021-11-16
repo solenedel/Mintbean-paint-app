@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-const Canvas = () => {
+const Canvas = ({ className }) => {
   // information to conserve between re-renders
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
@@ -11,8 +11,8 @@ const Canvas = () => {
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    canvas.style.width = `${window.innerWidth}px`;
-    canvas.style.height = `${window.innerHeight}px`;
+    canvas.style.width = `${window.innerWidth * 0.8}px`;
+    canvas.style.height = `${window.innerHeight * 0.8}px`;
     
     const context = canvas.getContext('2d');
     context.scale(1,1);
@@ -50,7 +50,7 @@ const Canvas = () => {
 
   return (
     <canvas
-      style={{backgroundColor: 'pink', border: '10px solid blue'}}
+      className={className}
       onMouseDown={startDrawing}
       onMouseUp={finishDrawing}
       onMouseMove={draw}
