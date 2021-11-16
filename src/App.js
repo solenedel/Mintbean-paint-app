@@ -10,16 +10,16 @@ function App() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    canvas.width = window.innerWidth * 2;
-    canvas.height = window.innerHeight * 2;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     canvas.style.width = `${window.innerWidth}px`;
     canvas.style.height = `${window.innerHeight}px`;
     
     const context = canvas.getContext('2d');
-    context.scale(2,2);
+    context.scale(1,1);
     context.lineCap = 'round';
     context.strokeStyle = 'black'; //NOTE: user will be able to choose this later
-    context.lineWith = 5; // NOTE: user will be able to choose this later
+    context.lineWith = 10; // NOTE: user will be able to choose this later
     contextRef.current = context;
   }, []);
 
