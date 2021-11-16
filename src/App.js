@@ -51,6 +51,7 @@ function App() {
 
   return (
     <canvas
+      style={{backgroundColor: 'pink'}}
       onMouseDown={startDrawing}
       onMouseUp={finishDrawing}
       onMouseMove={draw}
