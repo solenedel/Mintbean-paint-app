@@ -5,7 +5,7 @@ import Canvas from '../Canvas';
 
 export const StyledCanvas = styled(Canvas)`
   margin-top: 50px;
-  margin-bottom: 100px;
+  /* margin-bottom: 40px; */
   background-color: white;
   border-radius: 10px;
 `;
