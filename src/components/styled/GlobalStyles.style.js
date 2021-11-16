@@ -20,6 +20,7 @@ body {
 #canvas-container {
   display: flex; 
   justify-content: center;
+  border: solid red 3px;
 }
 
 `;
