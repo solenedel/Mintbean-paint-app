@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react';
-import './App.css';
 
 function App() {
 
@@ -13,8 +12,8 @@ function App() {
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth * 2;
     canvas.height = window.innerHeight * 2;
-    canvas.width.style = `${window.innerWidth}px`;
-    canvas.height.style = `${window.innerHeight}px`;
+    canvas.style.width = `${window.innerWidth}px`;
+    canvas.style.height = `${window.innerHeight}px`;
     
     const context = canvas.getContext('2d');
     context.scale(2,2);
