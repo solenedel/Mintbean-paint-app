@@ -1,7 +1,7 @@
 // colors
 const colorVars = {
   primaryDark: '#000000',
-  primaryLight: '#C9AAFF',
+  primaryLight: '#00ddc2',
   linkHover: '#F488E3',
 };
 

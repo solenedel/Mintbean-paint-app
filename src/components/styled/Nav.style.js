@@ -7,7 +7,7 @@ export const StyledNav = styled(Nav)`
   /* border: solid 3px blue; */
   background-color: #000000;
   height: 130px;
-  color: #C9AAFF;
+  color: #00ddc2;
 
   h2 {
     margin-left: 50px;
@@ -17,7 +17,7 @@ export const StyledNav = styled(Nav)`
 
   p {
     font-family: ${fonts.quoteFont};
-    font-size: 30px;
+    font-size: 35px;
     margin-right: 100px;
   }
 

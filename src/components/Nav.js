@@ -5,8 +5,8 @@ const Nav = ({ className }) => {
     <nav className={className}>
       <div id="nav-flexbox">
         <div id="title">
-          <img src="./images/art-and-design.png" alt="paint icon" />
-          <h2 id="logo">Peinture</h2>
+          <img src="./images/rgb.png" alt="paint icon" />
+          <h2 id="logo">Pintura</h2>
         </div>
 
         <div id="quote">

@@ -23,8 +23,8 @@ export const StyledDashboard = styled(Dashboard)`
   }
 
  #save {
-  color: #9FFBB3;
-  border: solid 3px #9FFBB3;
+  color: #00ddc2;
+  border: solid 3px #00ddc2;
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -33,13 +33,13 @@ export const StyledDashboard = styled(Dashboard)`
     color: black;
     transition: color 0.5s;
     transition: background 0.5s;
-    background: #9FFBB3;
+    background: #00ddc2;
   }
  }
 
  #undo {
-  color: #9FD8FB;
-  border: solid 3px #9FD8FB;
+  color: #5bd6fd;
+  border: solid 3px #5bd6fd;
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -48,13 +48,13 @@ export const StyledDashboard = styled(Dashboard)`
     color: black;
     transition: color 0.5s;
     transition: background 0.5s;
-    background: #9FD8FB;
+    background: #5bd6fd;
   }
  }
 
  #clear {
-  color: #FFAEC9;
-  border: solid 3px #FFAEC9;
+  color: #ff96c0;
+  border: solid 3px #ff96c0;
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -63,13 +63,13 @@ export const StyledDashboard = styled(Dashboard)`
     color: black;
     transition: color 0.5s;
     transition: background 0.5s;
-    background: #FFAEC9;
+    background: #ff96c0;
   }
  }
 
  #canvas-optn {
-  color: #FFEFAE;
-  border: solid 3px #FFEFAE;
+  color: #f8f097;
+  border: solid 3px #f8f097;
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -78,13 +78,13 @@ export const StyledDashboard = styled(Dashboard)`
     color: black;
     transition: color 0.5s;
     transition: background 0.5s;
-    background: #FFEFAE;
+    background: #f8f097;
   }
  }
 
  #brush-optn {
-  color: #D6AEFF;
-  border: solid 3px #D6AEFF;
+  color: #B9B4F0;
+  border: solid 3px #B9B4F0;
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -93,7 +93,7 @@ export const StyledDashboard = styled(Dashboard)`
     color: black;
     transition: color 0.5s;
     transition: background 0.5s;
-    background: #D6AEFF;
+    background: #B9B4F0;
   }
  }
 
