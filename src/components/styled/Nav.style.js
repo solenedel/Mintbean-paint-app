@@ -12,13 +12,15 @@ export const StyledNav = styled(Nav)`
   h2 {
     margin-left: 50px;
     font-family: ${fonts.titleFont};
-    font-size: 60px;
+    font-size: 70px;
   }
 
   p {
     font-family: ${fonts.quoteFont};
-    font-size: 35px;
+    font-size: 32px;
     margin-right: 100px;
+    opacity: 0.78;
+    margin-top: 18px;
   }
 
   #nav-flexbox {

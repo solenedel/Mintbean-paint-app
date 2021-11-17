@@ -7,9 +7,11 @@ const colorVars = {
 
 // fonts
 const fonts = {
-  titleFont: `'Pacifico', cursive`,
-  quoteFont: `'Reenie Beanie', cursive`,
+  titleFont: `'Caveat', cursive`,
+  quoteFont: `'Caveat', cursive`,
+  // quoteFont: `'Reenie Beanie', cursive`,
   mainFont: `'Itim', cursive`,
+  // mainFont: `'Caveat', cursive`
 }
 
 module.exports = { colorVars, fonts };
