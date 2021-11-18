@@ -8,9 +8,9 @@ const colorVars = {
 // fonts
 const fonts = {
   titleFont: `'Caveat', cursive`,
-  quoteFont: `'Caveat', cursive`,
+  quoteFont: `'Roboto Mono', monospace`,
   // quoteFont: `'Reenie Beanie', cursive`,
-  mainFont: `'Itim', cursive`,
+  mainFont: `'Roboto Mono', monospace`,
   // mainFont: `'Caveat', cursive`
 }
 

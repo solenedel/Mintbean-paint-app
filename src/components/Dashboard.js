@@ -3,11 +3,11 @@ import React from "react";
 export const Dashboard = ({className}) => {
   return ( 
     <section id="dashboard" className={className}>
-      <button id="undo">Undo</button>
-      <button id="clear">Clear canvas</button>
-      <button id="brush-optn">Brush options</button>
-      <button id="canvas-optn">Canvas options</button>
-      <button id="save">Save</button>
+      <button id="undo"><span>Undo</span></button>
+      <button id="clear"><span>Clear canvas</span></button>
+      <button id="brush-optn"><span>Brush options</span></button>
+      <button id="canvas-optn"><span>Canvas options</span></button>
+      <button id="save"><span>Save</span></button>
     </section>
    );
 }

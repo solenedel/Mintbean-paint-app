@@ -17,10 +17,12 @@ export const StyledNav = styled(Nav)`
 
   p {
     font-family: ${fonts.quoteFont};
-    font-size: 32px;
+    font-size: 22px;
     margin-right: 100px;
     opacity: 0.78;
     margin-top: 18px;
+    font-weight: 200;
+    font-style: italic;
   }
 
   #nav-flexbox {
@@ -41,6 +43,12 @@ export const StyledNav = styled(Nav)`
 
   img {
     width: 100px;
+  }
+
+  @media screen and (max-width: 785px) {
+    & p {
+      display: none;
+    }
   }
 `;
 

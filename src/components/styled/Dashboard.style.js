@@ -13,13 +13,18 @@ export const StyledDashboard = styled(Dashboard)`
 
   button {
     width: fit-content;
-    height: 40px;
+    height: 50px;
     font-size: 30px;
-    padding: 0 7px 0 7px;
     font-family: ${fonts.mainFont};
     color: #C9AAFF;
     background: none;
     border-radius: 5px;
+    margin-bottom: 25px;
+    /* padding: 10px; */
+
+    & span {
+       padding: 10px;
+    }
   }
 
  #save {
