@@ -3,7 +3,7 @@ import React from "react";
 const Footer = ({className}) => {
   return ( 
     <footer className={className}>
-        <h4>This website was made by: </h4>
+        <h4>This website was made by <a href="https://ca.linkedin.com/in/solene-delumeau">Solene</a></h4>
         <div id="footer-content">
         <ul>
           <div className="credits">

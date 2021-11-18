@@ -4,18 +4,28 @@ import { colorVars, fonts } from './css-variables';
 
 export const StyledFooter = styled(Footer)`
   background-color: ${colorVars.primaryDark};
+  border-top: solid 3px ${colorVars.primaryLight};
   height: 115px;
   width: 100vw;
   color: ${colorVars.primaryLight};
   position: static;
+  font-family: ${fonts.mainFont};
   /* margin-top: 100px; */
   & h4 {
     font-size: 20px;
     font-weight: 700;
-    font-family: ${fonts.titleFont};
     letter-spacing: 1px;
     margin: 5px 0 10px 20px;
     padding-top: 15px;
+
+    & a, a:visited {
+      text-decoration: none;
+      color: ${colorVars.linkHover};
+    }
+
+    & a:hover {
+      color: #f8f097;
+    }
   }
   & ul {
     margin: 0;
@@ -29,7 +39,8 @@ export const StyledFooter = styled(Footer)`
       & a,
       a:hover,
       a:active {
-        color: ${colorVars.primaryLightBrown};
+        color: ${colorVars.linkHover};
+        text-decoration: none;
       }
     }
   }
