@@ -14,12 +14,13 @@ export const StyledDashboard = styled(Dashboard)`
   button {
     width: fit-content;
     height: 50px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: ${fonts.mainFont};
     color: #C9AAFF;
     background: none;
     border-radius: 5px;
     margin-bottom: 25px;
+    margin-left: 15px;
     /* padding: 10px; */
 
     & span {
