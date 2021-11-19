@@ -10,15 +10,25 @@ export const StyledFooter = styled(Footer)`
   color: ${colorVars.primaryLight};
   position: static;
   font-family: ${fonts.mainFont};
+  display: flex;
+  justify-content: space-between;
   /* margin-top: 100px; */
+
+  & img {
+    height: 90px;
+    margin-right: 20px;
+    margin-top: 12px;
+  }
+
   & h4 {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
     margin: 5px 0 10px 20px;
     padding-top: 15px;
+  }
 
-    & a, a:visited {
+  & a, a:visited {
       text-decoration: none;
       color: ${colorVars.linkHover};
     }
@@ -26,21 +36,21 @@ export const StyledFooter = styled(Footer)`
     & a:hover {
       color: #f8f097;
     }
-  }
+
   & ul {
     margin: 0;
     padding: 0;
-    & li {
-      margin-bottom: 5px;
-      font-size: 18px;
-    }
+
     & div.credits {
       font-size: 14px;
+      
       & a,
-      a:hover,
       a:active {
         color: ${colorVars.linkHover};
         text-decoration: none;
+      }
+      & a:hover {
+      color: #f8f097;
       }
     }
   }
@@ -50,18 +60,5 @@ export const StyledFooter = styled(Footer)`
     flex-direction: row;
     justify-content: space-between;
   }
-  & .social-icons {
-    display: flex;
-    padding-right: 40px;
-    & i {
-      font-size: 40px;
-      margin-left: 20px;
-      opacity: 0.85;
-      transition: color 0.4s;
-      &:hover {
-        color: ${colorVars.pinkHover};
-        transition: color 0.4s;
-      }
-    }
-  }
+  
 `;
