@@ -13,13 +13,16 @@ const Canvas = ({ className }) => {
     canvas.height = window.innerHeight;
     canvas.style.width = `${window.innerWidth * 0.8}px`;
     canvas.style.height = `${window.innerHeight * 0.8}px`;
-    
+    canvas.imageSmoothingEnabled = true;
+    canvas.imageSmoothingQuality = "high";
+
     const context = canvas.getContext('2d');
     context.scale(1.26,1.26);
     context.lineCap = 'round';
     context.strokeStyle = 'purple'; //NOTE: user will be able to choose this later
-    context.lineWith = 15; // NOTE: user will be able to choose this later
+    context.lineWidth = 8; // NOTE: user will be able to choose this later
     contextRef.current = context;
+
   }, []);
 
   // triggered when user presses down on the mouse
@@ -28,6 +31,7 @@ const Canvas = ({ className }) => {
     contextRef.current.beginPath();
     contextRef.current.moveTo(offsetX, offsetY);
     setIsDrawing(true);
+ 
   };
 
   const finishDrawing = () => {
