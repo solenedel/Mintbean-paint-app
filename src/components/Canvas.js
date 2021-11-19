@@ -1,11 +1,28 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 const Canvas = ({ className }) => {
+
+  // alert user on page reload
+  useEffect(() => {
+    window.addEventListener("beforeunload", alertUser);
+    return () => {
+      window.removeEventListener("beforeunload", alertUser);
+    };
+  }, []);
+
+  const alertUser = (e) => {
+    e.preventDefault();
+    e.returnValue = "";
+  };
+
   // information to conserve between re-renders
   const canvasRef = useRef(null);
+  
   const contextRef = useRef(null);
 
   const [isDrawing, setIsDrawing] = useState(false);
+
+  // console.log('CONTEXT REF outside: ', contextRef);
 
   useEffect(() => {
     const canvas = canvasRef.current;
