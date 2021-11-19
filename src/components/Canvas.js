@@ -19,7 +19,7 @@ const Canvas = ({ className }) => {
     const context = canvas.getContext('2d');
     context.scale(1.26,1.26);
     context.lineCap = 'round';
-    context.strokeStyle = 'purple'; //NOTE: user will be able to choose this later
+    context.strokeStyle = 'black'; //NOTE: user will be able to choose this later
     context.lineWidth = 8; // NOTE: user will be able to choose this later
     contextRef.current = context;
 
