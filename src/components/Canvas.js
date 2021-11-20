@@ -1,14 +1,15 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { StyledDashboard } from './styled/Dashboard.style';
 
 const Canvas = ({ className }) => {
 
   // alert user on page reload
-  useEffect(() => {
-    window.addEventListener("beforeunload", alertUser);
-    return () => {
-      window.removeEventListener("beforeunload", alertUser);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("beforeunload", alertUser);
+  //   return () => {
+  //     window.removeEventListener("beforeunload", alertUser);
+  //   };
+  // }, []);
 
   const alertUser = (e) => {
     e.preventDefault();
@@ -85,7 +86,7 @@ const Canvas = ({ className }) => {
   };
 
   return (
-    <div>
+    <div id="canvas-and-dashboard">
         <canvas
         className={className}
         onMouseDown={startDrawing}
@@ -95,6 +96,7 @@ const Canvas = ({ className }) => {
         style={{backgroundColor: canvasColor}}
       />
       <button onClick={changeCanvasColor}>CHANGE COLOR</button>
+      <StyledDashboard />
     </div>
   )
 };
