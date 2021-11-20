@@ -11,10 +11,10 @@ const Canvas = ({ className }) => {
   //   };
   // }, []);
 
-  const alertUser = (e) => {
-    e.preventDefault();
-    e.returnValue = "";
-  };
+  // const alertUser = (e) => {
+  //   e.preventDefault();
+  //   e.returnValue = "";
+  // };
 
   // information to conserve between re-renders
   const canvasRef = useRef(null);
@@ -79,6 +79,7 @@ const Canvas = ({ className }) => {
 
   };
 
+  // --------- Dashboard button functions ----------- //
   const changeCanvasColor = () => {
     if (canvasColor) {
       setCanvasColor('blue');
@@ -95,8 +96,9 @@ const Canvas = ({ className }) => {
         ref={canvasRef}
         style={{backgroundColor: canvasColor}}
       />
-      <button onClick={changeCanvasColor}>CHANGE COLOR</button>
-      <StyledDashboard />
+      <StyledDashboard 
+      changeCanvasColor={changeCanvasColor}
+      />
     </div>
   )
 };
