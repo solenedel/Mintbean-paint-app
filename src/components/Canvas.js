@@ -98,6 +98,8 @@ const Canvas = ({ className }) => {
       />
       <StyledDashboard 
       changeCanvasColor={changeCanvasColor}
+      canvasColor={canvasColor}
+      setCanvasColor={(color) => {setCanvasColor(color.hex)}}
       />
     </div>
   )

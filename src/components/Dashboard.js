@@ -4,9 +4,9 @@ import { SketchPicker } from "react-color";
 
 export const Dashboard = (props) => {
 
-  const { className, changeCanvasColor} = props;
+  const { className, changeCanvasColor, canvasColor, setCanvasColor} = props;
 
-  const [canvasColor, setCanvasColor] = useState("#FFC0D9");
+  // const [canvasColor, setCanvasColor] = useState("#FFC0D9");
   const[isOpenCanvas, setIsOpenCanvas] = useState(false);
   const[isOpenBrush, setIsOpenBrush] = useState(false);
 
@@ -26,7 +26,7 @@ export const Dashboard = (props) => {
             <SketchPicker 
               className={'canvas-color-picker'}
               color={canvasColor}
-              onChangeComplete={(color) => {setCanvasColor(color.hex)}}/>
+              onChangeComplete={setCanvasColor}/>
           </div>} 
         </div>
       
