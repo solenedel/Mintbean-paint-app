@@ -6,11 +6,31 @@ import { Dashboard } from "../Dashboard";
 export const StyledDashboard = styled(Dashboard)`
   /* border: solid blue 3px; */
   height: 200px;
-  padding: 40px 10% 20px 10%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  /* margin-left: 40px;
+  margin-right: 40px; */
+  border: solid blue 3px;
 
+  div.normal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+ 
+  div.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  div.collapsibles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
   button {
     width: fit-content;
     height: 50px;
@@ -21,7 +41,6 @@ export const StyledDashboard = styled(Dashboard)`
     border-radius: 5px;
     margin-bottom: 25px;
     margin-left: 15px;
-    /* padding: 10px; */
 
     & span {
        padding: 10px;
