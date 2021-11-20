@@ -22,7 +22,9 @@ const Canvas = ({ className }) => {
 
   const [isDrawing, setIsDrawing] = useState(false);
 
-  // console.log('CONTEXT REF outside: ', contextRef);
+  const [canvasColor, setCanvasColor] = useState('#FFC0D9');
+
+
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -32,12 +34,16 @@ const Canvas = ({ className }) => {
     canvas.style.height = `${window.innerHeight * 0.8}px`;
     canvas.imageSmoothingEnabled = true;
     canvas.imageSmoothingQuality = "high";
+    canvas.style.canvasColor = 'blue';
+    console.log('canvas.style.color: ', canvas.style.color);
 
     const context = canvas.getContext('2d');
     context.scale(1.26,1.26);
     context.lineCap = 'round';
     context.strokeStyle = 'black'; //NOTE: user will be able to choose this later
     context.lineWidth = 8; // NOTE: user will be able to choose this later
+    context.imageSmoothingEnabled = true;
+    context.imageSmoothingQuality = "high";
     contextRef.current = context;
 
   }, []);
@@ -54,6 +60,9 @@ const Canvas = ({ className }) => {
   const finishDrawing = () => {
     contextRef.current.closePath();
     setIsDrawing(false);
+
+    console.log('CONTEXT REF current: ', contextRef.current);
+
   };
 
   const draw = ({ nativeEvent }) => {
@@ -69,14 +78,24 @@ const Canvas = ({ className }) => {
 
   };
 
+  const changeCanvasColor = () => {
+    if (canvasColor) {
+      setCanvasColor('blue');
+    }
+  };
+
   return (
-      <canvas
-      className={className}
-      onMouseDown={startDrawing}
-      onMouseUp={finishDrawing}
-      onMouseMove={draw}
-      ref={canvasRef}
-    />
+    <div>
+        <canvas
+        className={className}
+        onMouseDown={startDrawing}
+        onMouseUp={finishDrawing}
+        onMouseMove={draw}
+        ref={canvasRef}
+        style={{backgroundColor: canvasColor}}
+      />
+      <button onClick={changeCanvasColor}>CHANGE COLOR</button>
+    </div>
   )
 };
  
