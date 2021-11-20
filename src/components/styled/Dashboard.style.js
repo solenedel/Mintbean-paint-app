@@ -5,10 +5,13 @@ import { Dashboard } from "../Dashboard";
 
 export const StyledDashboard = styled(Dashboard)`
   /* border: solid blue 3px; */
-  height: 200px;
+  /* height: 200px; */
   /* margin-left: 40px;
   margin-right: 40px; */
   border: solid blue 3px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+
 
   div.normal-buttons {
     display: flex;
@@ -29,6 +32,8 @@ export const StyledDashboard = styled(Dashboard)`
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   
   button {

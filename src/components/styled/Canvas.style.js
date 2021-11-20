@@ -9,5 +9,7 @@ export const StyledCanvas = styled(Canvas)`
   /* background-color: #FFC0D9; */
   border: solid white 7px;
   border-radius: 10px;
+  margin-left: 10%;
+
 `;
  

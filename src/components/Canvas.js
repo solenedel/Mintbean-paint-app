@@ -31,8 +31,8 @@ const Canvas = ({ className }) => {
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    canvas.style.width = `${window.innerWidth * 0.8}px`;
-    canvas.style.height = `${window.innerHeight * 0.8}px`;
+    canvas.style.width = '80%';
+    canvas.style.height = '80%';
     canvas.imageSmoothingEnabled = true;
     canvas.imageSmoothingQuality = "high";
     canvas.style.canvasColor = 'blue';

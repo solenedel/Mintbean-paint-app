@@ -12,7 +12,7 @@ export const StyledFooter = styled(Footer)`
   font-family: ${fonts.mainFont};
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 200px;
 
   & img {
     height: 90px;
