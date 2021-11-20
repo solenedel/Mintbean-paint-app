@@ -4,11 +4,12 @@ import { SketchPicker } from "react-color";
 
 export const Dashboard = (props) => {
 
-  const { className, changeCanvasColor, canvasColor, setCanvasColor} = props;
+  const { className, canvasColor, setCanvasColor} = props;
 
   // const [canvasColor, setCanvasColor] = useState("#FFC0D9");
   const[isOpenCanvas, setIsOpenCanvas] = useState(false);
   const[isOpenBrush, setIsOpenBrush] = useState(false);
+
 
   return ( 
     <section id="dashboard" className={className}>
