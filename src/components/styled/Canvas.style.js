@@ -10,6 +10,11 @@ export const StyledCanvas = styled(Canvas)`
   border: solid white 7px;
   border-radius: 10px;
   /* margin-left: 10%; */
+
+  #canvas-and-dashboard {
+    display: flex;
+    flex-direction: column;
+  }
 /* 
   width:100%;
   max-width:100%;

@@ -20,12 +20,12 @@ export const Dashboard = (props) => {
 
         <div className="collapsibles">
           <button className="toggle" id="canvas-optn" onClick={() => setIsOpenCanvas(!isOpenCanvas)}><span>Canvas color</span></button>
-          {isOpenCanvas && <div className="content">Canvas color options</div>} 
+          {isOpenCanvas && <div className="content canvas">Canvas color options</div>} 
         </div>
       
         <div className="collapsibles">
           <button className="toggle" id="brush-optn" onClick={() => setIsOpenBrush(!isOpenBrush)}><span>Brush options</span></button>
-          {isOpenBrush && <div className="content">Brush options</div>} 
+          {isOpenBrush && <div className="content brush">Brush options</div>} 
         </div>
       </div>
     </section>

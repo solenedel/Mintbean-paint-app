@@ -4,9 +4,10 @@ import { Dashboard } from "../Dashboard";
 
 
 export const StyledDashboard = styled(Dashboard)`
-  border: solid blue 3px;
+  /* border: solid blue 3px; */
   margin-bottom: 30px;
   margin-top: 40px;
+
 
 
   div.normal-buttons {
@@ -34,7 +35,7 @@ export const StyledDashboard = styled(Dashboard)`
   
   button {
     width: fit-content;
-    height: 50px;
+    height: fit-content;
     font-size: 25px;
     font-family: ${fonts.mainFont};
     color: #C9AAFF;
@@ -123,10 +124,19 @@ export const StyledDashboard = styled(Dashboard)`
   }
  }
 
+ div.canvas {
+   margin-bottom: 70px;
+ }
+
 
 // media queries to resize dashboard buttons
-@media screen and (min-width: 930px) {
-  margin-left: 10vw;
-  margin-right: 10vw;
+@media screen and (max-width: 930px) {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+@media screen and (max-width: 800px) {
+  margin-left: 25%;
+  margin-right: 25%;
 }
 `;
