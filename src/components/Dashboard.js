@@ -1,10 +1,12 @@
 import React, {useState} from "react";
+import { SketchPicker } from "react-color";
 // import {colorVars} from './styled/css-variables';
 
 export const Dashboard = (props) => {
 
   const { className, changeCanvasColor} = props;
 
+  const [canvasColor, setCanvasColor] = useState("#FFC0D9");
   const[isOpenCanvas, setIsOpenCanvas] = useState(false);
   const[isOpenBrush, setIsOpenBrush] = useState(false);
 
@@ -20,7 +22,11 @@ export const Dashboard = (props) => {
 
         <div className="collapsibles">
           <button className="toggle" id="canvas-optn" onClick={() => setIsOpenCanvas(!isOpenCanvas)}><span>Canvas color</span></button>
-          {isOpenCanvas && <div className="content canvas">Canvas color options</div>} 
+          {isOpenCanvas && <div className="content canvas">Canvas color options
+            <SketchPicker 
+              color={canvasColor}
+              onChangeComplete={(color) => {setCanvasColor(color.hex)}}/>
+          </div>} 
         </div>
       
         <div className="collapsibles">
