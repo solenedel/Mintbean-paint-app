@@ -31,15 +31,15 @@ const Canvas = ({ className }) => {
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    canvas.style.width = '80%';
-    canvas.style.height = '80%';
+    canvas.style.width = `${window.innerWidth * 0.7}px`;
+    canvas.style.height = `${window.innerHeight * 0.7}px`;
     canvas.imageSmoothingEnabled = true;
     canvas.imageSmoothingQuality = "high";
     canvas.style.canvasColor = 'blue';
-    console.log('canvas.style.color: ', canvas.style.color);
+    // console.log('canvas.style.color: ', canvas.style.color);
 
     const context = canvas.getContext('2d');
-    context.scale(1.26,1.26);
+    context.scale(1.45,1.45); // PROBLEM HERE
     context.lineCap = 'round';
     context.strokeStyle = 'black'; //NOTE: user will be able to choose this later
     context.lineWidth = 8; // NOTE: user will be able to choose this later

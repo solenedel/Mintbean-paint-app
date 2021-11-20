@@ -9,7 +9,16 @@ export const StyledCanvas = styled(Canvas)`
   /* background-color: #FFC0D9; */
   border: solid white 7px;
   border-radius: 10px;
-  margin-left: 10%;
+  /* margin-left: 10%; */
+/* 
+  width:100%;
+  max-width:100%;
+  height:100%; */
+
+  /* @media screen and (max-width: 600px) {
+    width: 300px;
+    height: 300px;
+  } */
 
 `;
  
