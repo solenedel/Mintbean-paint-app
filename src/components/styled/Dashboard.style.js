@@ -124,10 +124,28 @@ export const StyledDashboard = styled(Dashboard)`
   }
  }
 
- div.canvas {
+ div.canvas , div.brush{
    margin-bottom: 70px;
  }
 
+
+
+ .sketch-picker {
+   /* border: solid red 3px; */
+   border-radius: 10px;
+   font-family: ${fonts.mainFont};
+   font-size: 18px;
+   font-weight: 400;
+ }
+
+ #rc-editable-input-2, 
+ #rc-editable-input-4, 
+ #rc-editable-input-6, 
+ #rc-editable-input-8,
+ #rc-editable-input-10 {
+  width: fit-content;
+  font-family: ${fonts.mainFont};
+ } 
 
 // media queries to resize dashboard buttons
 @media screen and (max-width: 930px) {

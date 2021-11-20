@@ -22,8 +22,9 @@ export const Dashboard = (props) => {
 
         <div className="collapsibles">
           <button className="toggle" id="canvas-optn" onClick={() => setIsOpenCanvas(!isOpenCanvas)}><span>Canvas color</span></button>
-          {isOpenCanvas && <div className="content canvas">Canvas color options
+          {isOpenCanvas && <div className="content canvas">
             <SketchPicker 
+              className={'canvas-color-picker'}
               color={canvasColor}
               onChangeComplete={(color) => {setCanvasColor(color.hex)}}/>
           </div>} 
