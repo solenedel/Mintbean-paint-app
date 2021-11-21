@@ -53,7 +53,7 @@ export const Dashboard = (props) => {
         </div>
       
         <div className="collapsibles">
-          <button className="toggle" id="brush-color" onClick={() => setIsOpenBrushColor(!isOpenBrushColor)}><span>Brush Color</span></button>
+          <button className="toggle" id="brush-color" onClick={() => setIsOpenBrushColor(!isOpenBrushColor)}><span>Brush color</span></button>
           {isOpenBrushColor && <div className="content brush">
           <SketchPicker 
               className={'brush-color-picker'}
@@ -63,12 +63,23 @@ export const Dashboard = (props) => {
         </div>
 
         <div className="collapsibles">
-          <button className="toggle" id="brush-size" onClick={() => setIsOpenBrushSize(!isOpenBrushSize)}><span>Brush Size</span></button>
-          {isOpenBrushSize && <div className="content brush">
-          <SketchPicker 
-              className={'brush-size-picker'}
-              size={brushSize}
-              onChangeComplete={setBrushSize} />
+          <button className="toggle" id="brush-size" onClick={() => setIsOpenBrushSize(!isOpenBrushSize)}><span>Brush size</span></button>
+          {isOpenBrushSize && <div className="content brush size">
+            <div>
+              <input type="radio" id="small" name="size" value="small" className="small" />
+              <label for="small" className="small">Small</label>
+            </div>
+        
+            <div>
+              <input type="radio" id="medium" name="size" value="medium" className="medium" />
+              <label for="medium" className="medium" >Medium</label>
+            </div>
+            
+            <div>
+              <input type="radio" id="large" name="size" value="large" className="large" />
+              <label for="large" className="large">Large</label>
+            </div>
+
           </div>} 
         </div>
 

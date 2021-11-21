@@ -141,6 +141,33 @@ export const StyledDashboard = styled(Dashboard)`
   }
  }
 
+ .size {
+   color: #FFC397;
+   font-family: ${fonts.mainFont};
+   display: flex;
+   flex-direction: column;
+   margin-left: 60px;
+   margin-bottom: 10px;
+
+   & label {
+     margin-left: 10px;
+   }
+ }
+
+ .small {
+  font-size: 18px;
+ }
+
+ .medium {
+  font-size: 22px;
+ }
+
+ .large {
+  font-size: 26px;
+ }
+
+
+
  div.canvas , div.brush{
    margin-bottom: 70px;
  }
