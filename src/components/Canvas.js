@@ -24,7 +24,8 @@ const Canvas = ({ canvasColor, setCanvasColor, className }) => {
   const [dimensions, setDimensions] = useState({
     width: undefined,
     height: undefined,
-  })
+  });
+
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -78,6 +79,7 @@ const Canvas = ({ canvasColor, setCanvasColor, className }) => {
   return (
     <div id="canvas-and-dashboard">
         <canvas
+          id="my-canvas"
           className={className}
           onMouseDown={startDrawing}
           onMouseUp={finishDrawing}

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { SketchPicker } from "react-color";
+import { saveAs } from 'file-saver';
 // import {colorVars} from './styled/css-variables';
 
 export const Dashboard = (props) => {
@@ -14,6 +15,14 @@ export const Dashboard = (props) => {
     contextRef.current.clearRect(0, 0, dimensions.width, dimensions.height);
   };
 
+  // save a TRANSPARENT (no canvas) doc in PNG format
+  const saveCanvas = () => {
+    const canvas = document.getElementById("my-canvas");
+    canvas.toBlob(function(blob) {
+        saveAs(blob, "my-artwork.png");
+    });
+  }
+
     //ERASER FUNCTION- CHANGE COLOR TO CANVAS COLOR
     // contextRef.current.strokeStyle = 'red';
 
@@ -23,7 +32,7 @@ export const Dashboard = (props) => {
       <div className="normal-buttons">
         <button id="undo"><span>Undo</span></button>
         <button id="clear" onClick={() => clearCanvas(contextRef, dimensions)}><span>Clear canvas</span></button>
-        <button id="save"><span>Save</span></button>
+        <button id="save" onClick={saveCanvas}><span>Save</span></button>
       </div>
     
       <div className="options" style={{color: 'white'}}>
