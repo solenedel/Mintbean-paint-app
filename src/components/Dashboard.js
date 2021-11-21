@@ -17,6 +17,11 @@ export const Dashboard = (props) => {
 
   // save a TRANSPARENT (no canvas) doc in PNG format
   const saveCanvas = () => {
+    // Notes for feature: add canvas background
+    // create canvas with same dimensions (id: save-canvas)
+    // use fillRect with canvas color
+    // draw image with first canvas( id: my-canvas) (transparent bkgrd)
+    
     const canvas = document.getElementById("my-canvas");
     canvas.toBlob(function(blob) {
         saveAs(blob, "my-artwork.png");

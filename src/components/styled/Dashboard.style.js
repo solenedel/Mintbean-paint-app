@@ -8,7 +8,9 @@ export const StyledDashboard = styled(Dashboard)`
   margin-bottom: 30px;
   margin-top: 40px;
 
-
+  button {
+    cursor: pointer;
+  }
 
   div.normal-buttons {
     display: flex;
