@@ -8,7 +8,7 @@ import { StyledFooter } from './components/styled/Footer.style';
 function App() {
 
   const [canvasColor, setCanvasColor] = useState("#FFC0D9");
-  const [brushColor, setBrushColor] = useState("#ffffff");
+  const [brushColor, setBrushColor] = useState("#000000");
   const [brushSize, setBrushSize] = useState("14");
 
   // persist canvas color on page reload
@@ -33,12 +33,10 @@ function App() {
           canvasColor={canvasColor}
           setCanvasColor={(color) => {
             setCanvasColor(color.hex);
-            // console.log('color change', color);
           }}
           brushColor={brushColor}
           setBrushColor={(color) => {
             setBrushColor(color.hex);
-            // console.log('color change', color);
           }}
           brushSize={brushSize}
           setBrushSize={setBrushSize}

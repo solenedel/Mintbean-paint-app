@@ -30,7 +30,6 @@ export const Dashboard = (props) => {
     //ERASER FUNCTION- CHANGE COLOR TO CANVAS COLOR
     // contextRef.current.strokeStyle = 'red';
 
-
   return ( 
     <section id="dashboard" className={className}>
       <div className="normal-buttons">

@@ -41,8 +41,8 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
     const context = canvas.getContext('2d');
     context.scale(1.45,1.45);
     context.lineCap = 'round';
-    context.strokeStyle = brushColor; //NOTE: user will be able to choose this later
-    context.lineWidth = brushSize; // NOTE: user will be able to choose this later
+    context.strokeStyle = brushColor;
+    context.lineWidth = brushSize; 
     context.imageSmoothingEnabled = true;
     context.imageSmoothingQuality = "high";
     contextRef.current = context;
@@ -74,6 +74,7 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
 
   };
 
+  // console.log('CANVAS', canvas);
 
   return (
     <div id="canvas-and-dashboard">
@@ -84,8 +85,8 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
           onMouseUp={finishDrawing}
           onMouseMove={draw}
           ref={canvasRef}
-          style={{backgroundColor: canvasColor, strokeStyle: brushColor}}
-          // strokeStyle={}
+          style={{backgroundColor: canvasColor}}
+          brushColor={canvasRef.current.brushColor} //DEBUG
 
         />
         <StyledDashboard
