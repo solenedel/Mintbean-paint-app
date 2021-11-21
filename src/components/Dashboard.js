@@ -5,11 +5,11 @@ import { saveAs } from 'file-saver';
 
 export const Dashboard = (props) => {
 
-  const { className, canvasColor, setCanvasColor, contextRef, dimensions } = props;
+  const { className, canvasColor, setCanvasColor, brushColor, setBrushColor, brushSize, setBrushSize, contextRef, dimensions } = props;
 
-  // const [canvasColor, setCanvasColor] = useState("#FFC0D9");
   const[isOpenCanvas, setIsOpenCanvas] = useState(false);
-  const[isOpenBrush, setIsOpenBrush] = useState(false);
+  const[isOpenBrushColor, setIsOpenBrushColor] = useState(false);
+  const[isOpenBrushSize, setIsOpenBrushSize] = useState(false);
 
   const clearCanvas = (contextRef, dimensions) => {
     contextRef.current.clearRect(0, 0, dimensions.width, dimensions.height);
@@ -40,7 +40,7 @@ export const Dashboard = (props) => {
         <button id="save" onClick={saveCanvas}><span>Save</span></button>
       </div>
     
-      <div className="options" style={{color: 'white'}}>
+      <div className="options">
 
         <div className="collapsibles">
           <button className="toggle" id="canvas-optn" onClick={() => setIsOpenCanvas(!isOpenCanvas)}><span>Canvas color</span></button>
@@ -48,15 +48,30 @@ export const Dashboard = (props) => {
             <SketchPicker 
               className={'canvas-color-picker'}
               color={canvasColor}
-              onChangeComplete={setCanvasColor}/>
-              {/* <button id='canvas-color-confirm-btn' >Set color</button> */}
+              onChangeComplete={setCanvasColor} />
           </div>} 
         </div>
       
         <div className="collapsibles">
-          <button className="toggle" id="brush-optn" onClick={() => setIsOpenBrush(!isOpenBrush)}><span>Brush options</span></button>
-          {isOpenBrush && <div className="content brush">Brush options</div>} 
+          <button className="toggle" id="brush-optn" onClick={() => setIsOpenBrushColor(!isOpenBrushColor)}><span>Brush Color</span></button>
+          {isOpenBrushColor && <div className="content brush">
+          <SketchPicker 
+              className={'brush-color-picker'}
+              color={brushColor}
+              onChangeComplete={setBrushColor} />
+          </div>} 
         </div>
+
+        <div className="collapsibles">
+          <button className="toggle" id="brush-size" onClick={() => setIsOpenBrushSize(!isOpenBrushSize)}><span>Brush Size</span></button>
+          {isOpenBrushSize && <div className="content brush">
+          <SketchPicker 
+              className={'brush-size-picker'}
+              color={brushSize}
+              onChangeComplete={setBrushSize} />
+          </div>} 
+        </div>
+
       </div>
     </section>
    );
