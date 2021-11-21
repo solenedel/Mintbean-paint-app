@@ -152,6 +152,7 @@ export const StyledDashboard = styled(Dashboard)`
    & label {
      margin-left: 10px;
    }
+
  }
 
  .small {

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { StyledDashboard } from './styled/Dashboard.style';
 
-const Canvas = ({ canvasColor, setCanvasColor, className }) => {
+const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSize, brushColor, setBrushColor }) => {
 
   // alert user on page reload
   // useEffect(() => {
@@ -27,21 +27,22 @@ const Canvas = ({ canvasColor, setCanvasColor, className }) => {
   });
 
 
+
   useEffect(() => {
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     canvas.style.width = `${window.innerWidth * 0.7}px`;
     canvas.style.height = `${window.innerHeight * 0.7}px`;
-    setDimensions({width: window.innerWidth, height: window.innerHeight });
+    setDimensions({width: window.innerWidth, height: window.innerHeight});
     canvas.imageSmoothingEnabled = true;
     canvas.imageSmoothingQuality = "high";
 
     const context = canvas.getContext('2d');
     context.scale(1.45,1.45);
     context.lineCap = 'round';
-    context.strokeStyle = 'black'; //NOTE: user will be able to choose this later
-    context.lineWidth = 8; // NOTE: user will be able to choose this later
+    context.strokeStyle = brushColor; //NOTE: user will be able to choose this later
+    context.lineWidth = brushSize; // NOTE: user will be able to choose this later
     context.imageSmoothingEnabled = true;
     context.imageSmoothingQuality = "high";
     contextRef.current = context;
@@ -63,8 +64,6 @@ const Canvas = ({ canvasColor, setCanvasColor, className }) => {
   };
 
   const draw = ({ nativeEvent }) => {
-    // only draw if the mouse is pressed down
-    // use this Word Clause format to decrease nesting
     if (!isDrawing) {
       return;
     }
@@ -85,11 +84,17 @@ const Canvas = ({ canvasColor, setCanvasColor, className }) => {
           onMouseUp={finishDrawing}
           onMouseMove={draw}
           ref={canvasRef}
-          style={{backgroundColor: canvasColor}}
+          style={{backgroundColor: canvasColor, strokeStyle: brushColor}}
+          // strokeStyle={}
+
         />
         <StyledDashboard
           canvasColor={canvasColor}
           setCanvasColor={setCanvasColor}
+          brushColor={brushColor}
+          setBrushColor={setBrushColor}
+          brushSize={brushSize}
+          setBrushSize={setBrushSize}
           contextRef={contextRef}
           dimensions={dimensions}
         />

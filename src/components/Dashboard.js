@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import { SketchPicker } from "react-color";
 import { saveAs } from 'file-saver';
-// import {colorVars} from './styled/css-variables';
 
 export const Dashboard = (props) => {
 
