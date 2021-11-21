@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colorVars, fonts } from './css-variables';
+import { fonts } from './css-variables';
 import { Dashboard } from "../Dashboard";
 
 

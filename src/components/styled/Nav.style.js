@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Nav from '../Nav';
-import { colorVars, fonts } from './css-variables';
+import { fonts } from './css-variables';
 
 
 export const StyledNav = styled(Nav)` 

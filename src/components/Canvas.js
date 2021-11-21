@@ -42,6 +42,7 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
     context.scale(1.45,1.45);
     context.lineCap = 'round';
     context.strokeStyle = brushColor;
+    console.log('BRUSH COLOR', brushColor);
     context.lineWidth = brushSize; 
     context.imageSmoothingEnabled = true;
     context.imageSmoothingQuality = "high";
@@ -49,13 +50,27 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
 
   }, []);
 
+
+  ////////// DEBUGGING ONLY ////
+  // const currentBrushColor = canvasRef.current.getContext('2d').strokeStyle;
+  // console.log('CURRENT BRUSH COLOR:', currentBrushColor);
+  // console.log('CANVAS REF', canvasRef);
+
+ 
+  // useEffect(() => {
+  //   const brushColor = canvasRef.current.getContext('2d').strokeStyle;
+  //   // console.log('brush color!!!', brushColor);
+  // }, [brushColor]);
+
+  /// /////////////////
+
+
   // triggered when user presses down on the mouse
   const startDrawing = ({ nativeEvent }) => {
     const { offsetX, offsetY } = nativeEvent;
     contextRef.current.beginPath();
     contextRef.current.moveTo(offsetX, offsetY);
     setIsDrawing(true);
-
   };
 
   const finishDrawing = () => {
@@ -86,7 +101,6 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
           onMouseMove={draw}
           ref={canvasRef}
           style={{backgroundColor: canvasColor}}
-          brushColor={canvasRef.current.brushColor} //DEBUG
 
         />
         <StyledDashboard

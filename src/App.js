@@ -36,6 +36,7 @@ function App() {
           }}
           brushColor={brushColor}
           setBrushColor={(color) => {
+            console.log('brush color.hex', color.hex);
             setBrushColor(color.hex);
           }}
           brushSize={brushSize}
