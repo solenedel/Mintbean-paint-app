@@ -54,6 +54,7 @@ export const StyledFooter = styled(Footer)`
       }
     }
   }
+  
   #footer-content {
     padding-left: 20px;
     display: flex;

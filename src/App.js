@@ -29,15 +29,16 @@ function App() {
       <StyledNav />
       <div id="canvas-container">
         <StyledCanvas
-        canvasColor={canvasColor}
-        setCanvasColor={(color) => {
-          setCanvasColor(color.hex);
-          console.log('color change', color);
-          }} />
+          canvasColor={canvasColor}
+          setCanvasColor={(color) => {
+            setCanvasColor(color.hex);
+            console.log('color change', color);
+          }}
+        />
       </div>
       <StyledFooter />
     </div>
-  )
-}
+  );
+};
 
 export default App;

@@ -18,7 +18,6 @@ const Canvas = ({ className }) => {
 
   // information to conserve between re-renders
   const canvasRef = useRef(null);
-  
   const contextRef = useRef(null);
 
   const [isDrawing, setIsDrawing] = useState(false);
@@ -39,7 +38,7 @@ const Canvas = ({ className }) => {
     // console.log('canvas.style.color: ', canvas.style.color);
 
     const context = canvas.getContext('2d');
-    context.scale(1.45,1.45); // PROBLEM HERE
+    context.scale(1.45,1.45); 
     context.lineCap = 'round';
     context.strokeStyle = 'black'; //NOTE: user will be able to choose this later
     context.lineWidth = 8; // NOTE: user will be able to choose this later
