@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { StyledDashboard } from './styled/Dashboard.style';
 
-const Canvas = ({ className }) => {
+const Canvas = ({ canvasColor, setCanvasColor, className }) => {
 
   // alert user on page reload
   // useEffect(() => {
@@ -22,10 +22,6 @@ const Canvas = ({ className }) => {
 
   const [isDrawing, setIsDrawing] = useState(false);
 
-  const [canvasColor, setCanvasColor] = useState('#FFC0D9');
-
-
-
   useEffect(() => {
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth;
@@ -38,7 +34,7 @@ const Canvas = ({ className }) => {
     // console.log('canvas.style.color: ', canvas.style.color);
 
     const context = canvas.getContext('2d');
-    context.scale(1.45,1.45); 
+    context.scale(1.45,1.45);
     context.lineCap = 'round';
     context.strokeStyle = 'black'; //NOTE: user will be able to choose this later
     context.lineWidth = 8; // NOTE: user will be able to choose this later
@@ -54,7 +50,7 @@ const Canvas = ({ className }) => {
     contextRef.current.beginPath();
     contextRef.current.moveTo(offsetX, offsetY);
     setIsDrawing(true);
- 
+
   };
 
   const finishDrawing = () => {
@@ -79,19 +75,19 @@ const Canvas = ({ className }) => {
   return (
     <div id="canvas-and-dashboard">
         <canvas
-        className={className}
-        onMouseDown={startDrawing}
-        onMouseUp={finishDrawing}
-        onMouseMove={draw}
-        ref={canvasRef}
-        style={{backgroundColor: canvasColor}}
-      />
-      <StyledDashboard 
-      canvasColor={canvasColor}
-      setCanvasColor={(color) => {setCanvasColor(color.hex)}}
-      />
+          className={className}
+          onMouseDown={startDrawing}
+          onMouseUp={finishDrawing}
+          onMouseMove={draw}
+          ref={canvasRef}
+          style={{backgroundColor: canvasColor}}
+        />
+        <StyledDashboard
+          canvasColor={canvasColor}
+          setCanvasColor={setCanvasColor}
+        />
     </div>
   )
 };
- 
+
 export default Canvas;
