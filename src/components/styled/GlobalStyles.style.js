@@ -8,6 +8,10 @@ export const GlobalStyles = createGlobalStyle`
   padding: 0;
 }
 
+#my-canvas:hover {
+  cursor: url(images/cursor.cur), auto;
+}
+
 body {
     background-color: ${colorVars.primaryDark};
     margin: 0px;
