@@ -4,7 +4,7 @@ const Footer = ({className}) => {
   return ( 
     <footer className={className}>
       <div>
-        <h4>This website was made by <a href="https://ca.linkedin.com/in/solene-delumeau">Solene</a></h4>
+        <h4>This website was made by <a href="https://ca.linkedin.com/in/solene-delumeau">Solene</a> and <a href="https://ca.linkedin.com/in/gacquroff">geecrypt</a></h4>
         <div id="footer-content">
           <ul>
             <div className="credits">
