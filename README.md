@@ -1,8 +1,27 @@
 # 🎨 Pintura 
 
-Pintura is a simple front-end paint app.
+Pintura is a simple front-end only paint app.
 
-To run the app in development mode: `npm run dev`
+### The deployed website is found [here](https://pintura-mintbean.herokuapp.com/)
+
+### To run the app in development mode: 
+1. clone the repository to your local machine
+2. in the terminal, enter: `npm run dev`
+
+## Screenshots
+
+- Add screenshots here
+
+## This app was made by:
+
+- **Solene** ➱ [github](https://github.com/solenedel) [LinkedIn](https://ca.linkedin.com/in/solene-delumeau)
+
+- **Gavin** ➱ [github](https://github.com/geecrypt) [LinkedIn](https://ca.linkedin.com/in/gacquroff)
+
+
+
+------
+
 
 ## TO DO
 
@@ -15,9 +34,11 @@ To run the app in development mode: `npm run dev`
 
 ## styling
 - button move down when pressed
+- change cursor to paint brush when on canvas (make them different for different users?)
 
 
 ## low priority
+- save button also downloads canvas color
 - undo button
 - make responsive for smaller & larger screens ??
 
