@@ -111,7 +111,7 @@ export const StyledDashboard = styled(Dashboard)`
   }
  }
 
- #brush-optn {
+ #brush-color {
   color: #B9B4F0;
   border: solid 3px #B9B4F0;
   transition: color 0.5s;
@@ -123,6 +123,21 @@ export const StyledDashboard = styled(Dashboard)`
     transition: color 0.5s;
     transition: background 0.5s;
     background: #B9B4F0;
+  }
+ }
+
+ #brush-size {
+  color: #FFC397;
+  border: solid 3px #FFC397;
+  transition: color 0.5s;
+  transition: background 0.5s;
+  background: black;
+
+  &:hover {
+    color: black;
+    transition: color 0.5s;
+    transition: background 0.5s;
+    background: #FFC397;
   }
  }
 

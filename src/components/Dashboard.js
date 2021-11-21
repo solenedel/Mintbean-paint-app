@@ -53,7 +53,7 @@ export const Dashboard = (props) => {
         </div>
       
         <div className="collapsibles">
-          <button className="toggle" id="brush-optn" onClick={() => setIsOpenBrushColor(!isOpenBrushColor)}><span>Brush Color</span></button>
+          <button className="toggle" id="brush-color" onClick={() => setIsOpenBrushColor(!isOpenBrushColor)}><span>Brush Color</span></button>
           {isOpenBrushColor && <div className="content brush">
           <SketchPicker 
               className={'brush-color-picker'}
@@ -67,7 +67,7 @@ export const Dashboard = (props) => {
           {isOpenBrushSize && <div className="content brush">
           <SketchPicker 
               className={'brush-size-picker'}
-              color={brushSize}
+              size={brushSize}
               onChangeComplete={setBrushSize} />
           </div>} 
         </div>
