@@ -147,6 +147,21 @@ export const StyledDashboard = styled(Dashboard)`
   font-family: ${fonts.mainFont};
  } 
 
+ #canvas-color-confirm-btn {
+   background: #f8f097;
+   transition: background 0.5s;
+   color: black;
+   border: none;
+   margin-top: 20px;
+   padding: 5px;
+   font-size: 20px;
+
+   &:hover {
+     background: #A6F972;
+     transition: background 0.5s;
+   }
+ }
+
 // media queries to resize dashboard buttons
 @media screen and (max-width: 930px) {
   margin-left: 20%;

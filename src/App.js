@@ -18,7 +18,8 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('canvasColor', JSON.stringify(canvasColor));
-    });
+    console.log('setting canvas color', canvasColor);
+    }, [canvasColor]);
   
   
 
@@ -29,7 +30,10 @@ function App() {
       <div id="canvas-container">
         <StyledCanvas
         canvasColor={canvasColor}
-        setCanvasColor={(color) => {setCanvasColor(color.hex)}} />
+        setCanvasColor={(color) => {
+          setCanvasColor(color.hex);
+          console.log('color change', color);
+          }} />
       </div>
       <StyledFooter />
     </div>

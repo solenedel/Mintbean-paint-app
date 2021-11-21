@@ -28,6 +28,7 @@ export const Dashboard = (props) => {
               className={'canvas-color-picker'}
               color={canvasColor}
               onChangeComplete={setCanvasColor}/>
+              {/* <button id='canvas-color-confirm-btn' >Set color</button> */}
           </div>} 
         </div>
       

@@ -61,9 +61,6 @@ const Canvas = ({ className }) => {
   const finishDrawing = () => {
     contextRef.current.closePath();
     setIsDrawing(false);
-
-    console.log('CONTEXT REF current: ', contextRef.current);
-
   };
 
   const draw = ({ nativeEvent }) => {
@@ -79,12 +76,6 @@ const Canvas = ({ className }) => {
 
   };
 
-  // --------- Dashboard button functions ----------- //
-  const changeCanvasColor = () => {
-    if (canvasColor) {
-      setCanvasColor('blue');
-    }
-  };
 
   return (
     <div id="canvas-and-dashboard">
@@ -97,7 +88,6 @@ const Canvas = ({ className }) => {
         style={{backgroundColor: canvasColor}}
       />
       <StyledDashboard 
-      changeCanvasColor={changeCanvasColor}
       canvasColor={canvasColor}
       setCanvasColor={(color) => {setCanvasColor(color.hex)}}
       />
