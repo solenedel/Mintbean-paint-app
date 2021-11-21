@@ -21,6 +21,10 @@ const Canvas = ({ canvasColor, setCanvasColor, className }) => {
   const contextRef = useRef(null);
 
   const [isDrawing, setIsDrawing] = useState(false);
+  const [dimensions, setDimensions] = useState({
+    width: undefined,
+    height: undefined,
+  })
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -28,10 +32,9 @@ const Canvas = ({ canvasColor, setCanvasColor, className }) => {
     canvas.height = window.innerHeight;
     canvas.style.width = `${window.innerWidth * 0.7}px`;
     canvas.style.height = `${window.innerHeight * 0.7}px`;
+    setDimensions({width: window.innerWidth, height: window.innerHeight });
     canvas.imageSmoothingEnabled = true;
     canvas.imageSmoothingQuality = "high";
-    canvas.style.canvasColor = 'blue';
-    // console.log('canvas.style.color: ', canvas.style.color);
 
     const context = canvas.getContext('2d');
     context.scale(1.45,1.45);
@@ -85,6 +88,8 @@ const Canvas = ({ canvasColor, setCanvasColor, className }) => {
         <StyledDashboard
           canvasColor={canvasColor}
           setCanvasColor={setCanvasColor}
+          contextRef={contextRef}
+          dimensions={dimensions}
         />
     </div>
   )

@@ -4,18 +4,25 @@ import { SketchPicker } from "react-color";
 
 export const Dashboard = (props) => {
 
-  const { className, canvasColor, setCanvasColor} = props;
+  const { className, canvasColor, setCanvasColor, contextRef, dimensions } = props;
 
   // const [canvasColor, setCanvasColor] = useState("#FFC0D9");
   const[isOpenCanvas, setIsOpenCanvas] = useState(false);
   const[isOpenBrush, setIsOpenBrush] = useState(false);
+
+  const clearCanvas = (contextRef, dimensions) => {
+    contextRef.current.clearRect(0, 0, dimensions.width, dimensions.height);
+  };
+
+    //ERASER FUNCTION- CHANGE COLOR TO CANVAS COLOR
+    // contextRef.current.strokeStyle = 'red';
 
 
   return ( 
     <section id="dashboard" className={className}>
       <div className="normal-buttons">
         <button id="undo"><span>Undo</span></button>
-        <button id="clear"><span>Clear canvas</span></button>
+        <button id="clear" onClick={() => clearCanvas(contextRef, dimensions)}><span>Clear canvas</span></button>
         <button id="save"><span>Save</span></button>
       </div>
     
