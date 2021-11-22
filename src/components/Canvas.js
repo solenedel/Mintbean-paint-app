@@ -4,17 +4,17 @@ import { StyledDashboard } from './styled/Dashboard.style';
 const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSize, brushColor, setBrushColor }) => {
 
   // alert user on page reload
-  // useEffect(() => {
-  //   window.addEventListener("beforeunload", alertUser);
-  //   return () => {
-  //     window.removeEventListener("beforeunload", alertUser);
-  //   };
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("beforeunload", alertUser);
+    return () => {
+      window.removeEventListener("beforeunload", alertUser);
+    };
+  }, []);
 
-  // const alertUser = (e) => {
-  //   e.preventDefault();
-  //   e.returnValue = "";
-  // };
+  const alertUser = (e) => {
+    e.preventDefault();
+    e.returnValue = "";
+  };
 
   // information to conserve between re-renders
   const canvasRef = useRef(null);
@@ -42,27 +42,12 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
     context.scale(1.45,1.45);
     context.lineCap = 'round';
     context.strokeStyle = brushColor;
-    console.log('BRUSH COLOR', brushColor);
     context.lineWidth = brushSize; 
     context.imageSmoothingEnabled = true;
     context.imageSmoothingQuality = "high";
     contextRef.current = context;
 
   }, []);
-
-
-  ////////// DEBUGGING ONLY ////
-  // const currentBrushColor = canvasRef.current.getContext('2d').strokeStyle;
-  // console.log('CURRENT BRUSH COLOR:', currentBrushColor);
-  // console.log('CANVAS REF', canvasRef);
-
- 
-  // useEffect(() => {
-  //   const brushColor = canvasRef.current.getContext('2d').strokeStyle;
-  //   // console.log('brush color!!!', brushColor);
-  // }, [brushColor]);
-
-  /// /////////////////
 
 
   // triggered when user presses down on the mouse
@@ -87,8 +72,6 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
     contextRef.current.lineTo(offsetX, offsetY);
     contextRef.current.stroke();
   };
-
-  // console.log('CANVAS', canvas);
 
   return (
     <div id="canvas-and-dashboard">

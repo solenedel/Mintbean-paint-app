@@ -57,7 +57,7 @@ export const Dashboard = (props) => {
     // create canvas with same dimensions (id: save-canvas)
     // use fillRect with canvas color
     // draw image with first canvas( id: my-canvas) (transparent bkgrd)
-
+    const canvasBkgd = New canvas
     const canvas = document.getElementById("my-canvas");
     canvas.toBlob(function(blob) {
         saveAs(blob, "my-artwork.png");
