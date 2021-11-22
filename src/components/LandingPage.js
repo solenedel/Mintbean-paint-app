@@ -32,20 +32,25 @@ const LandingPage = ({className}) => {
       <footer>
         <h2>Meet the developers</h2>
         <div className="devs">
-          <div>
+          <div className="dev one">
             <img className="dev-img" src="./images/dev-solene.png" alt="dev one" />
             <h5>Solène</h5>
-            <i class="fab fa-github" />
-            <i class="fab fa-linkedin" />
+            <div className="social-icons">
+              <i class="fab fa-github" />
+              <i class="fab fa-linkedin" />
+            </div>
           </div>
           
 
-          <div>
+          <div className="dev two">
             <img className="dev-img" src="./images/dev-gavin.png" alt="dev two" />
             <h5>Gavin</h5>
-            <i class="fab fa-github" />
-            <i class="fab fa-linkedin" />
+            <div className="social-icons">
+              <i class="fab fa-github" />
+              <i class="fab fa-linkedin" />
+            </div>
           </div>
+
         </div>
       </footer>
     </div>
