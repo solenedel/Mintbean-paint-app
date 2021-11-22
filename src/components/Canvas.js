@@ -100,7 +100,6 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
           onMouseMove={draw}
           ref={canvasRef}
           style={{backgroundColor: canvasColor}}
-
         />
         <StyledDashboard
           canvasColor={canvasColor}
