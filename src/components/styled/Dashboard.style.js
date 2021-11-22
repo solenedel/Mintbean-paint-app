@@ -66,20 +66,6 @@ export const StyledDashboard = styled(Dashboard)`
   }
  }
 
- #undo {
-  color: #5bd6fd;
-  border: solid 3px #5bd6fd;
-  transition: color 0.5s;
-  transition: background 0.5s;
-  background: black;
-
-  &:hover {
-    color: black;
-    transition: color 0.5s;
-    transition: background 0.5s;
-    background: #5bd6fd;
-  }
- }
 
  #clear {
   color: #ff96c0;

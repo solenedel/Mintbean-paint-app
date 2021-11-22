@@ -71,8 +71,6 @@ export const Dashboard = (props) => {
     }
   }, [brushColor, brushSize, contextRef]);
 
-    //ERASER FUNCTION- CHANGE COLOR TO CANVAS COLOR
-    // contextRef.current.strokeStyle = 'red';
 
   return (
     <section id="dashboard" className={className}>
@@ -125,31 +123,14 @@ export const Dashboard = (props) => {
                 label="large"
                 id="large"
                 handleChange={handleChange}
-                // onClick={changeBrushSize({})}
                 />
               </form>
-            {/* <div>
-              <input type="radio" id="small" name="size" value="small" className="small" />
-              <label for="small" className="small">Small</label>
-            </div>
-
-            <div>
-              <input type="radio" id="medium" name="size" value="medium" className="medium" />
-              <label for="medium" className="medium" >Medium</label>
-            </div>
-
-            <div>
-              <input type="radio" id="large" name="size" value="large" className="large" />
-              <label for="large" className="large">Large</label>
-            </div> */}
-
           </div>}
         </div>
 
     </div>
 
       <div className="normal-buttons">
-        <button id="undo"><span>Undo</span></button>
         <button id="clear" onClick={() => clearCanvas(contextRef, dimensions)}><span>Clear canvas</span></button>
         <button id="save" onClick={saveCanvas}><span>Save</span></button>
       </div>
