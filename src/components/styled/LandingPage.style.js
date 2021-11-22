@@ -6,7 +6,6 @@ export const StyledLandingPage = styled(LandingPage)`
 
   display: flex;
   flex-direction: column;
-  margin-bottom: 200px;
 
 header {
   padding-left: 40px;
@@ -24,10 +23,12 @@ header {
 
 #sentence-1 {
   margin-bottom: 40px;
+  color: #f8f097;
 }
 
 #sentence-2 {
   margin-left: 80px;
+  color: #f8f097;
 }
 
 #sentence-3 {
@@ -88,6 +89,7 @@ img {
   width: 200px;
   margin-left: 40%;
   margin-bottom: 100px;
+  opacity: 0.8;
 }
 
 p {
@@ -105,6 +107,7 @@ p {
     margin-left: 7%;
     margin-right: 7%;
     border-bottom: solid 3px #f8f097;
+    margin-bottom: 80px;
 
     & h3 {
     color: #f8f097;
@@ -115,6 +118,7 @@ p {
     margin-left: 7%;
     margin-right: 7%;
     border-bottom: solid 3px #ff96c0;
+    margin-bottom: 80px;
 
     & h3 {
     color: #ff96c0;
@@ -125,6 +129,7 @@ p {
     margin-left: 7%;
     margin-right: 7%;
     border-bottom: solid 3px #5bd6fd;
+    margin-bottom: 80px;
 
     & h3 {
     color: #5bd6fd;
@@ -134,6 +139,7 @@ p {
   #part-4 {
     margin-left: 7%;
     margin-right: 7%;
+    margin-bottom: 80px;
     border-bottom: solid 3px #B9B4F0;
 
     & h3 {
@@ -141,7 +147,25 @@ p {
     }
   }
 
+  footer {
+    height: 300px;
+    margin-top: 200px;
+    /* background-color: #5bd6fd; */
+    padding-top: 5%;
+    padding-left: 7%;
+    border-top: solid 4px ${colorVars.primaryLight};
+  }
 
+  & h2 {
+    color: ${colorVars.primaryLight};
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
 
+  .dev-img {
+    opacity: 1;
+    border-radius: 100px;
+    width: 150px;
+  }
 
 `;

@@ -28,6 +28,13 @@ const LandingPage = ({className}) => {
       <section id="part-4">
         <h3>Clear the canvas</h3>
       </section>
+
+      <footer>
+        <h2>Meet the developers</h2>
+        
+        <img className="dev-img" src="./images/dev-solene.png" alt="dev one" />
+        <img className="dev-img" src="./images/dev-gavin.png" alt="dev two" />
+      </footer>
     </div>
    );
 }
