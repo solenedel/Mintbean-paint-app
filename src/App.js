@@ -23,6 +23,9 @@ function App() {
     }, [canvasColor]);
   
   
+    // const changeBrushSize = () => {
+    //   setBrushSize(brushSize);
+    // }
 
   return (
     <div className="app">

@@ -6,9 +6,34 @@ export const Dashboard = (props) => {
 
   const { className, canvasColor, setCanvasColor, brushColor, setBrushColor, brushSize, setBrushSize, contextRef, dimensions } = props;
 
-  const[isOpenCanvas, setIsOpenCanvas] = useState(false);
-  const[isOpenBrushColor, setIsOpenBrushColor] = useState(false);
-  const[isOpenBrushSize, setIsOpenBrushSize] = useState(false);
+  const [isOpenCanvas, setIsOpenCanvas] = useState(false);
+  const [isOpenBrushColor, setIsOpenBrushColor] = useState(false);
+  const [isOpenBrushSize, setIsOpenBrushSize] = useState(false);
+  const [form, setFormValue] = useState({size: ''})
+
+  const RadioButton = ({ label, id, handleChange, name, form }) => (
+    <>
+      <input
+        type="radio"
+        id={id}
+        name={name}
+        onChange={handleChange}
+        value={id}
+        checked={form[name] === id}
+      />
+      <label htmlFor={id}>{label}</label>
+      <br />
+    </>
+  );
+
+  const handleChange = (e) => {
+    const {name, value, type, checked} = e.target;
+    //console.log({...e.target});
+    setFormValue((prevFormValues) => ({
+      ...prevFormValues,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
 
 
   const clearCanvas = (contextRef, dimensions) => {
@@ -59,7 +84,30 @@ export const Dashboard = (props) => {
 <div className="collapsibles">
   <button className="toggle" id="brush-size" onClick={() => setIsOpenBrushSize(!isOpenBrushSize)}><span>Brush size</span></button>
   {isOpenBrushSize && <div className="content brush size">
-    <div>
+    <form> 
+      <RadioButton
+        form={form}
+        name="size"
+        label="small"
+        id="small"
+        handleChange={handleChange}
+        />
+        <RadioButton
+        form={form}
+        name="size"
+        label="medium"
+        id="medium"
+        handleChange={handleChange}
+        />
+        <RadioButton
+        form={form}
+        name="size"
+        label="large"
+        id="large"
+        handleChange={handleChange}
+        />
+      </form>
+    {/* <div>
       <input type="radio" id="small" name="size" value="small" className="small" />
       <label for="small" className="small">Small</label>
     </div>
@@ -72,7 +120,7 @@ export const Dashboard = (props) => {
     <div>
       <input type="radio" id="large" name="size" value="large" className="large" />
       <label for="large" className="large">Large</label>
-    </div>
+    </div> */}
 
   </div>} 
 </div>

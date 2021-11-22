@@ -5,7 +5,7 @@ import { Dashboard } from "../Dashboard";
 
 export const StyledDashboard = styled(Dashboard)`
   /* border: solid blue 3px; */
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   margin-top: 40px;
 
   button {
@@ -43,7 +43,7 @@ export const StyledDashboard = styled(Dashboard)`
     color: #C9AAFF;
     background: none;
     border-radius: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     margin-left: 15px;
 
     & span {
@@ -175,12 +175,9 @@ export const StyledDashboard = styled(Dashboard)`
 
 
 
- .sketch-picker {
+ .slider-picker {
+   margin-top: 10px;
    /* border: solid red 3px; */
-   border-radius: 10px;
-   font-family: ${fonts.mainFont};
-   font-size: 18px;
-   font-weight: 400;
  }
 
  #rc-editable-input-2, 
