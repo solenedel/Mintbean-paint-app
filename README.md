@@ -6,7 +6,7 @@ Pintura is a simple front-end only paint app.
 
 ### To run the app in development mode: 
 1. clone the repository to your local machine
-2. in the terminal, enter: `npm run dev`
+2. in the terminal, enter: `npm start`
 
 ## Screenshots
 
@@ -25,21 +25,18 @@ Pintura is a simple front-end only paint app.
 
 ## TO DO
 
-1. user can change paint colour and paintbrush size
-2. make landing page
-3. update readme with instruction & links, etc.
-4. websockets
-5. update landing page with new features
+1. finish landing page
+2. finish save feature (canvas background)
+3. websockets
+
 
 
 ## styling
 - button move down when pressed
-- change cursor to paint brush when on canvas (make them different for different users?)
+
 
 
 ## low priority
-- save button also downloads canvas color
-- undo button
 - make responsive for smaller & larger screens ??
 
 ### resources
