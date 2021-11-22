@@ -50,18 +50,19 @@ export const Dashboard = (props) => {
     contextRef.current.clearRect(0, 0, dimensions.width, dimensions.height);
   };
 
-  const generateBackground = (dimensions) => {
-    return (
+  const generateBackground = (dimensions) => (
+    <>
       <canvas
         id="canvas-bkgd"
         width={dimensions.width}
         height={dimensions.height}
         style={{backgroundColor: canvasColor}}
-       />
-    );
-  };
+      />
+    </>
+  );
+    
 
-  generateBackground(dimensions);
+  console.log('TEST', generateBackground(dimensions));
   // console.log('canvasbkgd', canvasBkgd);
 
 
@@ -75,8 +76,8 @@ export const Dashboard = (props) => {
     console.log('CANVAS', canvas);
 
     // console.log('BKGN CANVAS', generateBackground(dimensions));
-    const canvasBkgd = document.getElementById("canvas-bkgd");
-    console.log('canvasbkgd', canvasBkgd);
+    // const canvasBkgd = document.getElementById("canvas-bkgd");
+    // console.log('canvasbkgd', canvasBkgd);
     // const ctx = canvasBkgdTwo.getContext('2d');
     // const final = ctx.drawImage(canvas, 0, 0);
     canvas.toBlob(function(blob) {
