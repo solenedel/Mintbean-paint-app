@@ -30,28 +30,42 @@ const LandingPage = ({className}) => {
       </section>
 
       <footer>
-        <h2>Meet the developers</h2>
-        <div className="devs">
-          <div className="dev one">
-            <img className="dev-img" src="./images/dev-solene.png" alt="dev one" />
-            <h5>Solène</h5>
-            <div className="social-icons">
-              <i class="fab fa-github" />
-              <i class="fab fa-linkedin" />
+        <div className="left-section">
+          <h2>Meet the developers</h2>
+          <div className="devs">
+            <div className="dev one">
+              <div className="name-pic">
+                <img className="dev-img" src="./images/dev-solene.png" alt="dev one" />
+                
+              </div>
+              <div className="social-icons">
+                <h5>Solène</h5>
+                <i class="fab fa-github" />
+                <i class="fab fa-linkedin" />
+              </div>
+            </div>
+            
+
+            <div className="dev two">
+              <div className="name-pic">
+                <img className="dev-img" src="./images/dev-gavin.png" alt="dev two" />
+              </div>
+              <div className="social-icons">
+              <h5>Gavin</h5>
+                <i class="fab fa-github" />
+                <i class="fab fa-linkedin" />
+              </div>
             </div>
           </div>
-          
-
-          <div className="dev two">
-            <img className="dev-img" src="./images/dev-gavin.png" alt="dev two" />
-            <h5>Gavin</h5>
-            <div className="social-icons">
-              <i class="fab fa-github" />
-              <i class="fab fa-linkedin" />
-            </div>
-          </div>
-
         </div>
+
+        <div className="right-section">
+          <h3 id="temp">Built with </h3>
+          <i class="fab fa-react" />
+          <i class="fab fa-html5" />
+          <i class="fab fa-css3-alt" />
+        </div>
+
       </footer>
     </div>
    );

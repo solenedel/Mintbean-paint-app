@@ -148,18 +148,30 @@ p {
   }
 
   footer {
-    height: 350px;
+    height: 230px;
     margin-top: 200px;
-    border-top: solid 4px ${colorVars.primaryLight};
+    border-top: solid 3px #f8f097;
+    display: flex;
+    justify-content: space-between;
   }
 
   & h2 {
-    color: ${colorVars.primaryLight};
-    font-size: 40px;
-    letter-spacing: 2px;
-    margin-top: 15px;
+    color: #f8f097;
+    font-family: ${fonts.mainFont};
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 20px;
     margin-left: 25px;
     margin-bottom: 25px;
+  }
+
+  & h3 {
+    color: ${colorVars.primaryLight};
+    font-family: ${fonts.mainFont};
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-right: 50px;
   }
 
   .dev-img {
@@ -174,13 +186,13 @@ p {
 
     .dev {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       align-self: center;
     }
 
     .dev.one {
-      margin-right: 40px;
+      margin-right: 100px;
     }
 
     & h5 {
@@ -188,26 +200,53 @@ p {
       margin-top: 10px;
       margin-bottom: 10px;
       font-family: ${fonts.mainFont};
-      color: #B9B4F0;
       font-weight: 300;
+      color: ${colorVars.linkHover};
+      margin-left: 10px;
     }
 
     & i.fab {
       font-size: 40px;
       color: ${colorVars.linkHover};
-      margin-right: 15px;
+      margin-right: 10px;
       margin-left: 5px;
+      opacity: 0.9;
 
       &:hover {
         color: #f8f097;
         cursor: pointer;
       }
-
-      & .social-icons {
-        display: flex;
-        /* padding-left: 10px; */
-      }
     }
   }
+
+
+  .right-section {
+    margin-right: 50px;
+
+    & h3 {
+      color: #f8f097;
+      margin-left: 50px;
+      margin-bottom: 30px;
+      font-weight: 300;
+      font-size: 20px;
+    }
+
+    & i {
+        font-size: 50px;
+        margin-left: 50px;
+      }
+
+      .fa-react {
+        color: #5bd6fd;
+      }
+
+      .fa-html5 {
+        color: #ff96c0;
+      }
+
+      .fa-css3-alt {
+        color: #B9B4F0;
+      }
+    }
 
 `;
