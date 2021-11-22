@@ -45,7 +45,10 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
     context.lineWidth = brushSize; 
     context.imageSmoothingEnabled = true;
     context.imageSmoothingQuality = "high";
+    context.fillStyle = canvasColor;
+    console.log('context.fillstyle', context.fillStyle);
     contextRef.current = context;
+
 
   }, []);
 

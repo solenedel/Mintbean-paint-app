@@ -34,7 +34,6 @@ export const Dashboard = (props) => {
 
   const handleChange = (e) => {
     const {name, value, type, checked} = e.target;
-    //console.log({...e.target});
     setFormValue((prevFormValues) => ({
       ...prevFormValues,
       [name]: type === 'checkbox' ? checked : value,
@@ -51,14 +50,35 @@ export const Dashboard = (props) => {
     contextRef.current.clearRect(0, 0, dimensions.width, dimensions.height);
   };
 
+  const generateBackground = (dimensions) => {
+    return (
+      <canvas
+        id="canvas-bkgd"
+        width={dimensions.width}
+        height={dimensions.height}
+        style={{backgroundColor: canvasColor}}
+       />
+    );
+  };
+
+  generateBackground(dimensions);
+  // console.log('canvasbkgd', canvasBkgd);
+
+
   // save a TRANSPARENT (no canvas) doc in PNG format
-  const saveCanvas = () => {
-    // Notes for feature: add canvas background
-    // create canvas with same dimensions (id: save-canvas)
-    // use fillRect with canvas color
-    // draw image with first canvas( id: my-canvas) (transparent bkgrd)
-    const canvasBkgd = New canvas
+  const saveCanvas = () => {  
+    // this only gives the very first initialised fill style (#ffc0d9)
+    // console.log('contextRef current fillStyle', contextRef.current.fillStyle);
+
+
     const canvas = document.getElementById("my-canvas");
+    console.log('CANVAS', canvas);
+
+    // console.log('BKGN CANVAS', generateBackground(dimensions));
+    const canvasBkgd = document.getElementById("canvas-bkgd");
+    console.log('canvasbkgd', canvasBkgd);
+    // const ctx = canvasBkgdTwo.getContext('2d');
+    // const final = ctx.drawImage(canvas, 0, 0);
     canvas.toBlob(function(blob) {
         saveAs(blob, "my-artwork.png");
     });
