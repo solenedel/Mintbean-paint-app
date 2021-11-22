@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { colorVars } from './css-variables';
+import { colorVars, fonts } from './css-variables';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 
 body {
     background-color: ${colorVars.primaryDark};
+    color: ${colorVars.primaryLight};
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;

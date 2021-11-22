@@ -4,7 +4,7 @@ import { StyledCanvas } from './components/styled/Canvas.style';
 import { GlobalStyles } from './components/styled/GlobalStyles.style';
 import { StyledNav } from './components/styled/Nav.style';
 import { StyledFooter } from './components/styled/Footer.style';
-
+import {StyledLandingPage} from './components/styled/LandingPage.style';
 
 function App() {
 
@@ -27,32 +27,32 @@ function App() {
   return (
     <Router>
       <div className="app">
-
+      <GlobalStyles />
         <Switch>
-          <Route exact path="/">
-            <GlobalStyles />
-            <StyledNav />
-            <div id="canvas-container">
-              <StyledCanvas
-                canvasColor={canvasColor}
-                setCanvasColor={(color) => {
-                  setCanvasColor(color.hex);
-                }}
-                brushColor={brushColor}
-                setBrushColor={(color) => {
-                  console.log('brush color.hex', color.hex);
-                  setBrushColor(color.hex);
-                }}
-                brushSize={brushSize}
-                setBrushSize={setBrushSize}
-              />
-            </div>
-            <StyledFooter />
-          </Route>
+          
+            <Route exact path="/">
+              <StyledNav />
+              <div id="canvas-container">
+                <StyledCanvas
+                  canvasColor={canvasColor}
+                  setCanvasColor={(color) => {
+                    setCanvasColor(color.hex);
+                  }}
+                  brushColor={brushColor}
+                  setBrushColor={(color) => {
+                    console.log('brush color.hex', color.hex);
+                    setBrushColor(color.hex);
+                  }}
+                  brushSize={brushSize}
+                  setBrushSize={setBrushSize}
+                />
+              </div>
+              <StyledFooter />
+            </Route>
 
-          <Route exact path="/landing-page">
-              <div>this is the landing page</div>
-          </Route>
+            <Route exact path="/landing-page">
+                <StyledLandingPage />
+            </Route>
 
         </Switch>
       </div>
