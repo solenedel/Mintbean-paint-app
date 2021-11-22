@@ -27,10 +27,9 @@ export const Dashboard = (props) => {
   );
 
   const changeBrushSize = (size) => {
-    if (size === "small") setBrushSize(14);
-    else if (size === "medium") setBrushSize(20);
-    else setBrushSize(26);
-    return;
+    if (size === "small") setBrushSize(8);
+    else if (size === "medium") setBrushSize(16);
+    else setBrushSize(32);
   }
 
   const handleChange = (e) => {
@@ -43,8 +42,6 @@ export const Dashboard = (props) => {
 
     console.log('selected size:', e.target.value);
     changeBrushSize(e.target.value);
-    console.log('changed size to:', brushSize);
-    // setBrushSize(e.target.value);
   };
 
 
@@ -68,8 +65,11 @@ export const Dashboard = (props) => {
   }
 
   useEffect(() => {
-    if (contextRef.current) contextRef.current.strokeStyle = brushColor;
-  }, [brushColor, contextRef]);
+    if (contextRef.current) {
+      contextRef.current.strokeStyle = brushColor;
+      contextRef.current.lineWidth = brushSize;
+    }
+  }, [brushColor, brushSize, contextRef]);
 
     //ERASER FUNCTION- CHANGE COLOR TO CANVAS COLOR
     // contextRef.current.strokeStyle = 'red';
