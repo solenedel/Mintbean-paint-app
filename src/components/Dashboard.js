@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { CirclePicker } from "react-color";
+import { CompactPicker } from "react-color";
 import { saveAs } from 'file-saver';
 
 export const Dashboard = (props) => {
@@ -82,7 +82,7 @@ export const Dashboard = (props) => {
         <div className="collapsibles">
           <button className="toggle" id="canvas-optn" onClick={() => setIsOpenCanvas(!isOpenCanvas)}><span>Canvas color</span></button>
           {isOpenCanvas && <div className="content canvas">
-            <CirclePicker
+            <CompactPicker
               className={'canvas-color-picker'}
               color={canvasColor}
               onChangeComplete={setCanvasColor} />
@@ -92,7 +92,7 @@ export const Dashboard = (props) => {
         <div className="collapsibles">
           <button className="toggle" id="brush-color" onClick={() => setIsOpenBrushColor(!isOpenBrushColor)}><span>Brush color</span></button>
           {isOpenBrushColor && <div className="content brush">
-          <CirclePicker
+          <CompactPicker
               className={'brush-color-picker'}
               color={brushColor}
               onChangeComplete={setBrushColor} />
