@@ -9,7 +9,7 @@ export const Dashboard = (props) => {
   const [isOpenCanvas, setIsOpenCanvas] = useState(false);
   const [isOpenBrushColor, setIsOpenBrushColor] = useState(false);
   const [isOpenBrushSize, setIsOpenBrushSize] = useState(false);
-  const [form, setFormValue] = useState({size: ''})
+  const [form, setFormValue] = useState({size: 'small'})
 
   const RadioButton = ({ label, id, handleChange, name, form }) => (
     <>
@@ -26,6 +26,13 @@ export const Dashboard = (props) => {
     </>
   );
 
+  const changeBrushSize = (size) => {
+    if (size === "small") setBrushSize(14);
+    else if (size === "medium") setBrushSize(20);
+    else setBrushSize(26);
+    return;
+  }
+
   const handleChange = (e) => {
     const {name, value, type, checked} = e.target;
     //console.log({...e.target});
@@ -33,7 +40,14 @@ export const Dashboard = (props) => {
       ...prevFormValues,
       [name]: type === 'checkbox' ? checked : value,
     }));
+
+    console.log('selected size:', e.target.value);
+    changeBrushSize(e.target.value);
+    console.log('changed size to:', brushSize);
+    // setBrushSize(e.target.value);
   };
+
+  
 
 
   const clearCanvas = (contextRef, dimensions) => {
@@ -91,6 +105,7 @@ export const Dashboard = (props) => {
         label="small"
         id="small"
         handleChange={handleChange}
+        
         />
         <RadioButton
         form={form}
@@ -98,6 +113,7 @@ export const Dashboard = (props) => {
         label="medium"
         id="medium"
         handleChange={handleChange}
+        
         />
         <RadioButton
         form={form}
@@ -105,6 +121,7 @@ export const Dashboard = (props) => {
         label="large"
         id="large"
         handleChange={handleChange}
+        // onClick={changeBrushSize({})}
         />
       </form>
     {/* <div>
