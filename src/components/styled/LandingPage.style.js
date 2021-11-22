@@ -84,7 +84,7 @@ h4 {
   color: ${colorVars.linkHover};
 }
 
-img {
+img.palette-icon {
   margin-top: 40px;
   width: 200px;
   margin-left: 40%;
@@ -148,24 +148,36 @@ p {
   }
 
   footer {
-    height: 300px;
+    height: 500px;
     margin-top: 200px;
-    /* background-color: #5bd6fd; */
-    padding-top: 5%;
-    padding-left: 7%;
     border-top: solid 4px ${colorVars.primaryLight};
   }
 
   & h2 {
     color: ${colorVars.primaryLight};
     font-size: 40px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-bottom: 25px;
   }
 
   .dev-img {
-    opacity: 1;
     border-radius: 100px;
-    width: 150px;
+    width: 120px;
+    margin-left: 50px;
+  }
+
+  .devs {
+    display: flex;
+    justify-content: flex-start;
+    /* border: solid red 3px; */
+
+    & h5 {
+      font-size: 20px;
+      font-family: ${fonts.mainFont};
+      margin-left: 50px;
+    }
   }
 
 `;

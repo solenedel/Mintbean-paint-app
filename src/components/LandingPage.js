@@ -14,7 +14,7 @@ const LandingPage = ({className}) => {
         <h1 id="sentence-3">try <span id="pintura">Pintura</span> for free!</h1>
       </div>
 
-      <img src="./images/color-palette.png" alt="paint icon" />
+      <img src="./images/color-palette.png" className="palette-icon" alt="paint icon" />
 
       <section id="part-1">
         <h3>Choose a canvas color</h3>
@@ -31,9 +31,22 @@ const LandingPage = ({className}) => {
 
       <footer>
         <h2>Meet the developers</h2>
-        
-        <img className="dev-img" src="./images/dev-solene.png" alt="dev one" />
-        <img className="dev-img" src="./images/dev-gavin.png" alt="dev two" />
+        <div className="devs">
+          <div>
+            <img className="dev-img" src="./images/dev-solene.png" alt="dev one" />
+            <h5>Solène</h5>
+            <i class="fab fa-github" />
+            <i class="fab fa-linkedin" />
+          </div>
+          
+
+          <div>
+            <img className="dev-img" src="./images/dev-gavin.png" alt="dev two" />
+            <h5>Gavin</h5>
+            <i class="fab fa-github" />
+            <i class="fab fa-linkedin" />
+          </div>
+        </div>
       </footer>
     </div>
    );
