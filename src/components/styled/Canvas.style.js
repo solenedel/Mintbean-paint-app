@@ -8,7 +8,13 @@ export const StyledCanvas = styled(Canvas)`
   margin-bottom: 10px;
   border: solid white 7px;
   border-radius: 10px;
-  /* margin-left: 10%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  border: solid blue 3px;
+  /* margin-left: 8%;
+  */
 
   /* #canvas-and-dashboard {
     border: solid yellow 3px;
@@ -22,11 +28,12 @@ export const StyledCanvas = styled(Canvas)`
   width:100%;
   max-width:100%;
   height:100%; */
+  
 
-  /* @media screen and (max-width: 600px) {
-    width: 300px;
-    height: 300px;
-  } */
+@media screen and (max-width: 1000px) {
+        margin-left: 10vw;
+       border: solid red 7px;
+  } 
 
 `;
  
