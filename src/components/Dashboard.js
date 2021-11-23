@@ -69,13 +69,19 @@ export const Dashboard = (props) => {
   }, [brushColor, brushSize, contextRef]);
 
 
+
   return (
     <section id="dashboard" className={className}>
 
       <div className="options">
 
         <div className="collapsibles">
-          <button className="toggle" id="canvas-optn" onClick={() => setIsOpenCanvas(!isOpenCanvas)}><span>Canvas color</span></button>
+          <button className="toggle" id="canvas-optn" onClick={() => {
+            setIsOpenCanvas(!isOpenCanvas);
+            if (isOpenBrushColor) setIsOpenBrushColor(!isOpenBrushColor);
+            if (isOpenBrushSize) setIsOpenBrushSize(!isOpenBrushSize);
+           }
+          }><span>Canvas color</span></button>
           {isOpenCanvas && <div className="content canvas">
             <CompactPicker
               className={'canvas-color-picker'}
@@ -85,7 +91,12 @@ export const Dashboard = (props) => {
         </div>
 
         <div className="collapsibles">
-          <button className="toggle" id="brush-color" onClick={() => setIsOpenBrushColor(!isOpenBrushColor)}><span>Brush color</span></button>
+          <button className="toggle" id="brush-color" onClick={() => {
+            setIsOpenBrushColor(!isOpenBrushColor);
+            if (isOpenCanvas) setIsOpenCanvas(!isOpenCanvas);
+            if (isOpenBrushSize) setIsOpenBrushSize(!isOpenBrushSize);
+            }
+          }><span>Brush color</span></button>
           {isOpenBrushColor && <div className="content brush">
           <CompactPicker
               className={'brush-color-picker'}
@@ -95,7 +106,12 @@ export const Dashboard = (props) => {
         </div>
 
         <div className="collapsibles">
-          <button className="toggle" id="brush-size" onClick={() => setIsOpenBrushSize(!isOpenBrushSize)}><span>Brush size</span></button>
+          <button className="toggle" id="brush-size" onClick={() => {
+            setIsOpenBrushSize(!isOpenBrushSize);
+            if (isOpenCanvas) setIsOpenCanvas(!isOpenCanvas);
+            if (isOpenBrushColor) setIsOpenBrushColor(!isOpenBrushColor);
+            }
+          }><span>Brush size</span></button>
           {isOpenBrushSize && <div className="content brush size">
             <form>
               <RadioButton
