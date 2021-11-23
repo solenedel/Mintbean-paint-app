@@ -5,10 +5,11 @@ import { GlobalStyles } from './components/styled/GlobalStyles.style';
 import { StyledNav } from './components/styled/Nav.style';
 import { StyledFooter } from './components/styled/Footer.style';
 import {StyledLandingPage} from './components/styled/LandingPage.style';
+import { colorVars } from './components/styled/css-variables';
 
 function App() {
 
-  const [canvasColor, setCanvasColor] = useState("#ffffff");
+  const [canvasColor, setCanvasColor] = useState(colorVars.startingCanvasColor);
   const [brushColor, setBrushColor] = useState("#000000");
   const [brushSize, setBrushSize] = useState("8");
 

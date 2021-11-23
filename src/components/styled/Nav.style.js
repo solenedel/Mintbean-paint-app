@@ -4,7 +4,6 @@ import { colorVars, fonts } from './css-variables';
 
 
 export const StyledNav = styled(Nav)` 
-  /* border: solid 3px blue; */
   background-color: #000000;
   height: 130px;
   color: ${colorVars.linkHover};

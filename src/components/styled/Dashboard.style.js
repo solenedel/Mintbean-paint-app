@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fonts } from './css-variables';
+import { colorVars, fonts } from './css-variables';
 import { Dashboard } from "../Dashboard";
 
 
@@ -52,8 +52,8 @@ export const StyledDashboard = styled(Dashboard)`
   }
 
  #save {
-  color: #00ddc2;
-  border: solid 3px #00ddc2;
+  color: ${colorVars.primaryLight};
+  border: solid 3px ${colorVars.primaryLight};
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -62,14 +62,14 @@ export const StyledDashboard = styled(Dashboard)`
     color: black;
     transition: color 0.5s;
     transition: background 0.5s;
-    background: #00ddc2;
+    background: ${colorVars.primaryLight};
   }
  }
 
 
  #clear {
-  color: #ff96c0;
-  border: solid 3px #ff96c0;
+  color: ${colorVars.red};
+  border: solid 3px ${colorVars.red};
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -78,13 +78,13 @@ export const StyledDashboard = styled(Dashboard)`
     color: black;
     transition: color 0.5s;
     transition: background 0.5s;
-    background: #ff96c0;
+    background: ${colorVars.red};
   }
  }
 
  #canvas-optn {
-  color: #f8f097;
-  border: solid 3px #f8f097;
+  color: ${colorVars.blue};
+  border: solid 3px ${colorVars.blue};
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -93,13 +93,13 @@ export const StyledDashboard = styled(Dashboard)`
     color: black;
     transition: color 0.5s;
     transition: background 0.5s;
-    background: #f8f097;
+    background: ${colorVars.blue};
   }
  }
 
  #brush-color {
-  color: #B9B4F0;
-  border: solid 3px #B9B4F0;
+  color: ${colorVars.purple};
+  border: solid 3px ${colorVars.purple};
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -108,13 +108,13 @@ export const StyledDashboard = styled(Dashboard)`
     color: black;
     transition: color 0.5s;
     transition: background 0.5s;
-    background: #B9B4F0;
+    background: ${colorVars.purple};
   }
  }
 
  #brush-size {
-  color: #FFC397;
-  border: solid 3px #FFC397;
+  color: ${colorVars.orange};
+  border: solid 3px ${colorVars.orange};
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -123,7 +123,7 @@ export const StyledDashboard = styled(Dashboard)`
     color: black;
     transition: color 0.5s;
     transition: background 0.5s;
-    background: #FFC397;
+    background: ${colorVars.orange};
   }
  }
 
@@ -153,17 +153,13 @@ export const StyledDashboard = styled(Dashboard)`
   font-size: 26px;
  }
 
-
-
  div.canvas , div.brush{
    margin-bottom: 70px;
  }
 
 
-
  .slider-picker {
    margin-top: 10px;
-   /* border: solid red 3px; */
  }
 
  #rc-editable-input-2, 
@@ -175,20 +171,6 @@ export const StyledDashboard = styled(Dashboard)`
   font-family: ${fonts.mainFont};
  } 
 
- #canvas-color-confirm-btn {
-   background: #f8f097;
-   transition: background 0.5s;
-   color: black;
-   border: none;
-   margin-top: 20px;
-   padding: 5px;
-   font-size: 20px;
-
-   &:hover {
-     background: #A6F972;
-     transition: background 0.5s;
-   }
- }
 
 // media queries to resize dashboard buttons
 @media screen and (max-width: 930px) {
