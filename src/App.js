@@ -8,7 +8,7 @@ import {StyledLandingPage} from './components/styled/LandingPage.style';
 
 function App() {
 
-  const [canvasColor, setCanvasColor] = useState("#FFC0D9");
+  const [canvasColor, setCanvasColor] = useState("#f8f097");
   const [brushColor, setBrushColor] = useState("#000000");
   const [brushSize, setBrushSize] = useState("8");
 
@@ -20,7 +20,6 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('canvasColor', JSON.stringify(canvasColor));
-    console.log('setting canvas color', canvasColor);
     }, [canvasColor]);
   
 

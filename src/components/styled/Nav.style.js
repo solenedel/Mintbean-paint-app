@@ -7,7 +7,7 @@ export const StyledNav = styled(Nav)`
   /* border: solid 3px blue; */
   background-color: #000000;
   height: 130px;
-  color: #00ddc2;
+  color: ${colorVars.linkHover};
 
   h2 {
     margin-left: 50px;
@@ -18,7 +18,7 @@ export const StyledNav = styled(Nav)`
 
   p {
     font-family: ${fonts.mainFont};
-    color: #f8f097;
+    color: ${colorVars.primaryLight};;
     font-size: 22px;
     margin-right: 60px;
     opacity: 0.78;

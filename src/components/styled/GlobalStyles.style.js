@@ -27,7 +27,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: solid red 3px;
+  /* border: solid red 3px; */
 }
 
 `;

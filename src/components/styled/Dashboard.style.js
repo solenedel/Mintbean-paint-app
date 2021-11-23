@@ -7,9 +7,7 @@ export const StyledDashboard = styled(Dashboard)`
   margin-bottom: 25px;
   margin-top: 40px;
   display: flex;
-  border: solid blue 3px;
   justify-content: center;
-  /* max-width: 100%; */
 
   button {
     cursor: pointer;
@@ -35,8 +33,6 @@ export const StyledDashboard = styled(Dashboard)`
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* margin-left: 10vw;
-    margin-right: 10vw; */
   }
   
   button {
