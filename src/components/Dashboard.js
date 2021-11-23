@@ -86,7 +86,8 @@ export const Dashboard = (props) => {
             <CompactPicker
               className={'canvas-color-picker'}
               color={canvasColor}
-              onChangeComplete={setCanvasColor} />
+              onChangeComplete={setCanvasColor}
+              />
           </div>}
         </div>
 
@@ -101,7 +102,9 @@ export const Dashboard = (props) => {
           <CompactPicker
               className={'brush-color-picker'}
               color={brushColor}
-              onChangeComplete={setBrushColor} />
+              onChangeComplete={setBrushColor}
+              style={{input: {color: 'white'}}}
+            />
           </div>}
         </div>
 
@@ -120,6 +123,7 @@ export const Dashboard = (props) => {
                 label="small"
                 id="small"
                 handleChange={handleChange}
+                className="radio-button"
 
                 />
                 <RadioButton
@@ -128,6 +132,7 @@ export const Dashboard = (props) => {
                 label="medium"
                 id="medium"
                 handleChange={handleChange}
+                className="radio-button"
 
                 />
                 <RadioButton
@@ -136,6 +141,8 @@ export const Dashboard = (props) => {
                 label="large"
                 id="large"
                 handleChange={handleChange}
+                className="radio-button"
+
                 />
               </form>
           </div>}

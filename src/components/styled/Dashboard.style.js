@@ -4,7 +4,7 @@ import { Dashboard } from "../Dashboard";
 
 
 export const StyledDashboard = styled(Dashboard)`
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
   margin-top: 40px;
   display: flex;
   justify-content: center;
@@ -141,16 +141,8 @@ export const StyledDashboard = styled(Dashboard)`
 
  }
 
- .small {
-  font-size: 18px;
- }
-
- .medium {
-  font-size: 22px;
- }
-
- .large {
-  font-size: 26px;
+ form {
+  font-size: 20px;
  }
 
  div.canvas , div.brush{
@@ -158,18 +150,16 @@ export const StyledDashboard = styled(Dashboard)`
  }
 
 
- .slider-picker {
-   margin-top: 10px;
+ .brush-color-picker, .canvas-color-picker {
+   background-color: black;
  }
 
- #rc-editable-input-2, 
- #rc-editable-input-4, 
- #rc-editable-input-6, 
- #rc-editable-input-8,
- #rc-editable-input-10 {
-  width: fit-content;
-  font-family: ${fonts.mainFont};
- } 
+ .flexbox-fix {
+  background-color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 98%;
+}
 
 
 // media queries to resize dashboard buttons
