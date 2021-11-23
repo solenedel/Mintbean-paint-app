@@ -10,7 +10,7 @@ function App() {
 
   const [canvasColor, setCanvasColor] = useState("#FFC0D9");
   const [brushColor, setBrushColor] = useState("#000000");
-  const [brushSize, setBrushSize] = useState("14");
+  const [brushSize, setBrushSize] = useState("8");
 
   // persist canvas color on page reload
   useEffect(() => {
