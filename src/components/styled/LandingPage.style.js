@@ -8,10 +8,14 @@ export const StyledLandingPage = styled(LandingPage)`
   flex-direction: column;
 
   .demo-section {
-    padding-left: 20px;
     padding-right: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .B {
+    flex-direction: row-reverse;
   }
 
 header {
@@ -62,6 +66,19 @@ button {
   }
 }
 
+#try-pintura {
+  width: fit-content;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  align-self: center;
+
+  & a {
+    font-size: 30px;
+  }
+  
+}
+
 a, a:visited {
   font-family: ${fonts.mainFont};
   font-size: 25px;
@@ -93,7 +110,7 @@ h4 {
 
 img.palette-icon {
   margin-top: 40px;
-  width: 200px;
+  width: 150px;
   margin-left: 40%;
   margin-bottom: 100px;
   opacity: 0.8;
@@ -113,7 +130,7 @@ p {
   #part-1 {
     margin-left: 7%;
     margin-right: 7%;
-    border-bottom: solid 3px #f8f097;
+    /* border-bottom: solid 3px #f8f097; */
     margin-bottom: 80px;
 
     & h3 {
@@ -124,39 +141,39 @@ p {
   #part-2 {
     margin-left: 7%;
     margin-right: 7%;
-    border-bottom: solid 3px #ff96c0;
+    /* border-bottom: solid 3px #ff96c0; */
     margin-bottom: 80px;
 
     & h3 {
-    color: #ff96c0;
+    color: #f8f097;
     }
   }
 
   #part-3 {
     margin-left: 7%;
     margin-right: 7%;
-    border-bottom: solid 3px #5bd6fd;
+    /* border-bottom: solid 3px #5bd6fd; */
     margin-bottom: 80px;
 
     & h3 {
-    color: #5bd6fd;
+    color: #f8f097;
     }
   }
 
   #part-4 {
     margin-left: 7%;
     margin-right: 7%;
-    margin-bottom: 80px;
-    border-bottom: solid 3px #B9B4F0;
+    margin-bottom: 120px;
+    /* border-bottom: solid 3px #B9B4F0; */
 
     & h3 {
-    color: #B9B4F0;
+    color: #f8f097;
     }
   }
 
   footer {
-    height: 230px;
-    margin-top: 200px;
+    height: 200px;
+    margin-top: 100px;
     border-top: solid 3px #f8f097;
     display: flex;
     justify-content: space-between;
@@ -179,6 +196,11 @@ p {
     font-size: 24px;
     margin-top: 20px;
     margin-right: 50px;
+  }
+
+  .gif {
+    border-radius: 10px;
+    border: solid #f8f097 3px;
   }
 
   .dev-img {
@@ -256,4 +278,14 @@ p {
       }
     }
 
+    .warning {
+      /* border: solid red 3px; */
+      margin: 50px 80px 0 80px;
+      line-height: 40px;
+      font-size: 22px;
+
+      & #important {
+        color: #f8f097;
+      }
+    }
 `;

@@ -18,25 +18,33 @@ const LandingPage = ({className}) => {
 
       <section id="part-1">
         <div className="demo-section">
-          <h3>Choose a canvas color</h3>
-          <img src="./gifs/canvas-color-demo.gif" alt="canvas color demo" width="40%" />
+          <h3>Choose a canvas color ▶</h3>
+          <img src="./gifs/canvas-color-demo.gif" className="gif" alt="canvas color demo" width="40%" />
         </div>
       </section>
       <section id="part-2">
-        <div className="demo-section">
-          <h3>Select brush color and size</h3>
-          <img src="./gifs/brush-demo.gif" alt="brush demo" width="40%" />
+        <div className="demo-section B">
+          <h3>◀ Select brush color and size</h3>
+          <img src="./gifs/brush-demo.gif" className="gif" alt="brush demo" width="40%" />
         </div>
       </section>
       <section id="part-3">
-        <h3>Save your drawing as a PNG file</h3>
-      </section>
-      <section id="part-4">
         <div className="demo-section">
-          <h3>Clear the canvas</h3>
-          <img src="./gifs/clear-demo.gif" alt="brush demo" width="40%" />
+          <h3>Save your drawing as a PNG file ▶</h3>
         </div>
       </section>
+      <section id="part-4">
+        <div className="demo-section B">
+          <h3>◀ Clear the canvas</h3>
+          <img src="./gifs/clear-demo.gif" className="gif" alt="brush demo" width="40%" />
+        </div>
+      </section>
+
+      <button id="try-pintura"><a href="/">try Pintura</a></button>
+
+      <div className="warning">
+        <p>This app is designed for <span id="important">desktop and laptop</span> computers. The drawing functionality will not work properly on touchscreens such as phones and tablets.</p>
+      </div>
 
       <footer>
         <div className="left-section">
