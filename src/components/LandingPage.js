@@ -57,8 +57,8 @@ const LandingPage = ({className}) => {
               </div>
               <div className="social-icons">
                 <h5>Solène</h5>
-                <i class="fab fa-github" />
-                <i class="fab fa-linkedin" />
+                <a href="https://github.com/solenedel"><i class="fab fa-github" /></a>
+                <a href="https://www.linkedin.com/in/solene-delumeau"><i class="fab fa-linkedin" /></a>
               </div>
             </div>
             
@@ -69,8 +69,8 @@ const LandingPage = ({className}) => {
               </div>
               <div className="social-icons">
               <h5>Gavin</h5>
-                <i class="fab fa-github" />
-                <i class="fab fa-linkedin" />
+                <a href="https://github.com/geecrypt"><i class="fab fa-github" /></a>
+                <a href="https://www.linkedin.com/in/gacquroff"><i class="fab fa-linkedin" /></a>
               </div>
             </div>
           </div>
