@@ -17,16 +17,25 @@ const LandingPage = ({className}) => {
       <img src="./images/color-palette.png" className="palette-icon" alt="paint icon" />
 
       <section id="part-1">
-        <h3>Choose a canvas color</h3>
+        <div className="demo-section">
+          <h3>Choose a canvas color</h3>
+          <img src="./gifs/canvas-color-demo.gif" alt="canvas color demo" width="40%" />
+        </div>
       </section>
       <section id="part-2">
-        <h3>Select brush color and size</h3>
+        <div className="demo-section">
+          <h3>Select brush color and size</h3>
+          <img src="./gifs/brush-demo.gif" alt="brush demo" width="40%" />
+        </div>
       </section>
       <section id="part-3">
         <h3>Save your drawing as a PNG file</h3>
       </section>
       <section id="part-4">
-        <h3>Clear the canvas</h3>
+        <div className="demo-section">
+          <h3>Clear the canvas</h3>
+          <img src="./gifs/clear-demo.gif" alt="brush demo" width="40%" />
+        </div>
       </section>
 
       <footer>

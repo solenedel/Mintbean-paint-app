@@ -4,6 +4,11 @@ Pintura is a simple front-end only paint app.
 
 ### The deployed website is found [here](https://pintura-mintbean.herokuapp.com/)
 
+
+## Notes to users:
+- The drawing functionality only works properly in desktop and laptop computers (not touchscreens)
+
+
 ### To run the app in development mode: 
 1. clone the repository to your local machine
 2. in the terminal, enter: `npm start`

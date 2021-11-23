@@ -7,6 +7,13 @@ export const StyledLandingPage = styled(LandingPage)`
   display: flex;
   flex-direction: column;
 
+  .demo-section {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
 header {
   padding-left: 40px;
   background-color:${colorVars.primaryLight};
