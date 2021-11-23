@@ -1,6 +1,11 @@
 # 🎨 Pintura 
 
-Pintura is a simple front-end only paint app.
+Pintura is a simple front-end only paint app. Coose the canvas color, brush color, and brush size. Clear the canvas or save your painting as a PNG file. 
+
+## Notes to users:
+- The app is not intended for touchscreens (phones or tables will not work).
+- The drawing functionality only works properly in desktop and laptop computers.
+
 
 ### The deployed website is [here](https://pintura-mintbean.herokuapp.com/)
 
@@ -8,13 +13,9 @@ Pintura is a simple front-end only paint app.
 
 ![screenshot](./public/images/screenshot-1.png)
 
-## Notes to users:
-- The app is not intended for touchscreens (phones or tables will not work).
-- The drawing functionality only works properly in desktop and laptop computers.
-
 
 ### To run the app in development mode: 
-1. clone the repository to your local machine
+1. clone the repository to your local machine using `git clone` 
 2. in the terminal, enter: `npm start`
 
 ## This app was made by:
