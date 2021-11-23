@@ -4,7 +4,7 @@ import { saveAs } from 'file-saver';
 
 export const Dashboard = (props) => {
 
-  const { className, canvasColor, setCanvasColor, brushColor, setBrushColor, brushSize, setBrushSize, contextRef, dimensions } = props;
+  const { className, canvasColor, setCanvasColor, brushColor, setBrushColor, brushSize, setBrushSize, contextRef, bkgdContextRef, dimensions } = props;
 
   const [isOpenCanvas, setIsOpenCanvas] = useState(false);
   const [isOpenBrushColor, setIsOpenBrushColor] = useState(false);
@@ -50,37 +50,13 @@ export const Dashboard = (props) => {
     contextRef.current.clearRect(0, 0, dimensions.width, dimensions.height);
   };
 
-  const generateBackground = (dimensions) => (
-    <>
-      <canvas
-        id="canvas-bkgd"
-        width={dimensions.width}
-        height={dimensions.height}
-        style={{backgroundColor: canvasColor}}
-      />
-    </>
-  );
-    
-
-  console.log('TEST', generateBackground(dimensions));
-  // console.log('canvasbkgd', canvasBkgd);
-
-
-  // save a TRANSPARENT (no canvas) doc in PNG format
-  const saveCanvas = () => {  
-    // this only gives the very first initialised fill style (#ffc0d9)
-    // console.log('contextRef current fillStyle', contextRef.current.fillStyle);
-
-
-    const canvas = document.getElementById("my-canvas");
-    console.log('CANVAS', canvas);
-
-    // console.log('BKGN CANVAS', generateBackground(dimensions));
-    // const canvasBkgd = document.getElementById("canvas-bkgd");
-    // console.log('canvasbkgd', canvasBkgd);
-    // const ctx = canvasBkgdTwo.getContext('2d');
-    // const final = ctx.drawImage(canvas, 0, 0);
-    canvas.toBlob(function(blob) {
+  const saveCanvas = (contextRef, bkgdContextRef, dimensions, canvasColor) => {
+    const mainCanvas = document.getElementById("my-canvas");
+    bkgdContextRef.current.fillStyle = canvasColor;
+    bkgdContextRef.current.fillRect(0,0,dimensions.width, dimensions.height);
+    bkgdContextRef.current.drawImage(mainCanvas, 0, 0, dimensions.width * 0.7, dimensions.height * 0.7)
+    const bkgdCanvas = document.getElementById("canvas-bkgd");
+    bkgdCanvas.toBlob(function(blob) {
         saveAs(blob, "my-artwork.png");
     });
   }
@@ -153,7 +129,7 @@ export const Dashboard = (props) => {
 
       <div className="normal-buttons">
         <button id="clear" onClick={() => clearCanvas(contextRef, dimensions)}><span>Clear</span></button>
-        <button id="save" onClick={saveCanvas}><span>Save</span></button>
+        <button id="save" onClick={() => saveCanvas(contextRef, bkgdContextRef, dimensions, canvasColor)}><span>Save</span></button>
       </div>
 
 
