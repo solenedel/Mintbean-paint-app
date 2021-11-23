@@ -18,7 +18,9 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
 
   // information to conserve between re-renders
   const canvasRef = useRef(null);
+  const bkgdCanvasRef = useRef(null);
   const contextRef = useRef(null);
+  const bkgdContextRef = useRef(null);
 
   const [isDrawing, setIsDrawing] = useState(false);
   const [dimensions, setDimensions] = useState({
@@ -26,9 +28,7 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
     height: undefined,
   });
 
-
-
-  useEffect(() => {
+  const setupCanvasAndContext = (canvasRef, contextRef) => {
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -45,11 +45,14 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
     context.lineWidth = brushSize; 
     context.imageSmoothingEnabled = true;
     context.imageSmoothingQuality = "high";
-    context.fillStyle = canvasColor;
-    console.log('context.fillstyle', context.fillStyle);
     contextRef.current = context;
+  }
 
 
+  useEffect(() => {
+    setupCanvasAndContext(canvasRef, contextRef);
+    // create a hidden canvas for file saving
+    setupCanvasAndContext(bkgdCanvasRef, bkgdContextRef);
   }, []);
 
 
@@ -89,6 +92,11 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
           ref={canvasRef}
           style={{backgroundColor: canvasColor}}
         />
+        <canvas
+            id="canvas-bkgd"
+            ref={bkgdCanvasRef}
+            style={{display: 'none'}}
+        />
         <StyledDashboard
           canvasColor={canvasColor}
           setCanvasColor={setCanvasColor}
@@ -97,6 +105,7 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
           brushSize={brushSize}
           setBrushSize={setBrushSize}
           contextRef={contextRef}
+          bkgdContextRef={bkgdContextRef}
           dimensions={dimensions}
         />
     </div>
