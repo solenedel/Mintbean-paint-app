@@ -4,17 +4,18 @@ import { Dashboard } from "../Dashboard";
 
 
 export const StyledDashboard = styled(Dashboard)`
-  /* border: solid blue 3px; */
   margin-bottom: 25px;
   margin-top: 40px;
+  display: flex;
 
   button {
     cursor: pointer;
+    margin-right: 10px;
   }
 
   div.normal-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 20px;
     flex-wrap: wrap;
   }

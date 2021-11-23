@@ -152,7 +152,7 @@ export const Dashboard = (props) => {
     </div>
 
       <div className="normal-buttons">
-        <button id="clear" onClick={() => clearCanvas(contextRef, dimensions)}><span>Clear canvas</span></button>
+        <button id="clear" onClick={() => clearCanvas(contextRef, dimensions)}><span>Clear</span></button>
         <button id="save" onClick={saveCanvas}><span>Save</span></button>
       </div>
 

@@ -19,8 +19,8 @@ export const StyledNav = styled(Nav)`
   p {
     font-family: ${fonts.mainFont};
     color: #f8f097;
-    font-size: 30px;
-    margin-right: 100px;
+    font-size: 22px;
+    margin-right: 60px;
     opacity: 0.78;
     margin-top: 18px;
     font-weight: 400;
@@ -48,7 +48,7 @@ export const StyledNav = styled(Nav)`
     width: 100px;
   }
 
-  @media screen and (max-width: 785px) {
+  @media screen and (max-width: 950px) {
     & p {
       display: none;
     }
