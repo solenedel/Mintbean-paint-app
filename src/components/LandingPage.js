@@ -31,6 +31,8 @@ const LandingPage = ({className}) => {
       <section id="part-3">
         <div className="demo-section">
           <h3>Save your drawing as a PNG file ▶</h3>
+          <img src="./gifs/save-demo.gif" className="gif" alt="brush demo" width="40%" />
+
         </div>
       </section>
       <section id="part-4">
