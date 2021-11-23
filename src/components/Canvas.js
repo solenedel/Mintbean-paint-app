@@ -4,17 +4,17 @@ import { StyledDashboard } from './styled/Dashboard.style';
 const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSize, brushColor, setBrushColor }) => {
 
   // alert user on page reload
-  useEffect(() => {
-    window.addEventListener("beforeunload", alertUser);
-    return () => {
-      window.removeEventListener("beforeunload", alertUser);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("beforeunload", alertUser);
+  //   return () => {
+  //     window.removeEventListener("beforeunload", alertUser);
+  //   };
+  // }, []);
 
-  const alertUser = (e) => {
-    e.preventDefault();
-    e.returnValue = "";
-  };
+  // const alertUser = (e) => {
+  //   e.preventDefault();
+  //   e.returnValue = "";
+  // };
 
   // information to conserve between re-renders
   const canvasRef = useRef(null);

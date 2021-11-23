@@ -10,7 +10,7 @@ const Nav = ({ className }) => {
         </div>
 
         <div id="quote">
-          <p>“Everything starts from a dot.” &nbsp; &nbsp; —Vasily Kandinsky</p>
+          <p>“Everything starts from a dot.” &nbsp;  —Vasily Kandinsky</p>
         </div>
       </div>
     </nav>
