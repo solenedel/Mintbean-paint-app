@@ -8,7 +8,7 @@ import {StyledLandingPage} from './components/styled/LandingPage.style';
 
 function App() {
 
-  const [canvasColor, setCanvasColor] = useState("#f8f097");
+  const [canvasColor, setCanvasColor] = useState("#ffffff");
   const [brushColor, setBrushColor] = useState("#000000");
   const [brushSize, setBrushSize] = useState("8");
 
