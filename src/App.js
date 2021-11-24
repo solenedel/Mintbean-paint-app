@@ -30,7 +30,7 @@ function App() {
       <GlobalStyles />
         <Switch>
           
-            <Route exact path="/">
+            <Route exact path="/paint">
               <StyledNav />
               <div id="canvas-container">
                 <StyledCanvas
@@ -50,7 +50,7 @@ function App() {
               <StyledFooter />
             </Route>
 
-            <Route exact path="/landing-page">
+            <Route exact path="/">
                 <StyledLandingPage />
             </Route>
 
