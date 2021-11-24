@@ -5,7 +5,7 @@ const LandingPage = ({className}) => {
     <div id="landing-page" className={className}>
       <header>
         <div id="title">Pintura</div>
-        <button><a href="/">start painting</a></button>
+        <button><a href="/paint">start painting</a></button>
       </header>
 
       <div className="tagline">
@@ -42,7 +42,7 @@ const LandingPage = ({className}) => {
         </div>
       </section>
 
-      <button id="try-pintura"><a href="/">try Pintura</a></button>
+      <button id="try-pintura"><a href="/paint">try Pintura</a></button>
 
       <div className="warning">
         <p>This app is designed for <span id="important">desktop and laptop</span> computers. The drawing functionality will not work properly on touchscreens such as phones and tablets.</p>
