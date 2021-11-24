@@ -51,6 +51,18 @@ export const StyledNav = styled(Nav)`
     & p {
       display: none;
     }
+
+  }
+
+  @media screen and (max-width: 700px) {
+    /* & p {
+      display: none;
+    } */
+
+    & h2 {
+    font-size: 65px;
+    margin-left: 60px;
+  }
   }
 `;
 

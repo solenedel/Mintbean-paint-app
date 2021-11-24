@@ -61,5 +61,18 @@ export const StyledFooter = styled(Footer)`
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media screen and (max-width: 950px) {
+
+    & h4 {
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    & img {
+    display: none;
+  }
+
+  }
   
 `;
