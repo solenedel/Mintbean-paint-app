@@ -59,8 +59,8 @@ const LandingPage = ({className}) => {
               </div>
               <div className="social-icons">
                 <h5>Solène</h5>
-                <a href="https://github.com/solenedel"><i class="fab fa-github" /></a>
-                <a href="https://www.linkedin.com/in/solene-delumeau"><i class="fab fa-linkedin" /></a>
+                <a href="https://github.com/solenedel"><i className="fab fa-github" /></a>
+                <a href="https://www.linkedin.com/in/solene-delumeau"><i className="fab fa-linkedin" /></a>
               </div>
             </div>
             
@@ -71,8 +71,8 @@ const LandingPage = ({className}) => {
               </div>
               <div className="social-icons">
               <h5>Gavin</h5>
-                <a href="https://github.com/geecrypt"><i class="fab fa-github" /></a>
-                <a href="https://www.linkedin.com/in/gacquroff"><i class="fab fa-linkedin" /></a>
+                <a href="https://github.com/geecrypt"><i className="fab fa-github" /></a>
+                <a href="https://www.linkedin.com/in/gacquroff"><i className="fab fa-linkedin" /></a>
               </div>
             </div>
           </div>
@@ -81,9 +81,9 @@ const LandingPage = ({className}) => {
         <div className="right-section">
           <h3>Built with </h3>
           <div className="tools">
-            <i class="fab fa-react" />
-            <i class="fab fa-html5" />
-            <i class="fab fa-css3-alt" />
+            <i className="fab fa-react" />
+            <i className="fab fa-html5" />
+            <i className="fab fa-css3-alt" />
           </div>
         </div>
 
