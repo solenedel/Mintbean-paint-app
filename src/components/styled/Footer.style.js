@@ -24,7 +24,7 @@ export const StyledFooter = styled(Footer)`
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 5px 0 10px 20px;
+    margin: 5px 0 30px 20px;
     padding-top: 15px;
   }
 
@@ -66,7 +66,6 @@ export const StyledFooter = styled(Footer)`
 
     & h4 {
       font-size: 15px;
-      margin-bottom: 30px;
     }
 
     & img {

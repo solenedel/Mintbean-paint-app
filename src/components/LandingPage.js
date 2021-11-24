@@ -79,10 +79,12 @@ const LandingPage = ({className}) => {
         </div>
 
         <div className="right-section">
-          <h3 id="temp">Built with </h3>
-          <i class="fab fa-react" />
-          <i class="fab fa-html5" />
-          <i class="fab fa-css3-alt" />
+          <h3>Built with </h3>
+          <div className="tools">
+            <i class="fab fa-react" />
+            <i class="fab fa-html5" />
+            <i class="fab fa-css3-alt" />
+          </div>
         </div>
 
       </footer>
