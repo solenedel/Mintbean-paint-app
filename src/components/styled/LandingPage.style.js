@@ -32,18 +32,9 @@ header {
   margin-left: 40px;
 }
 
-#sentence-1 {
+#sentence-1, #sentence-2 {
   margin-bottom: 40px;
   color: #f8f097;
-}
-
-#sentence-2 {
-  margin-left: 80px;
-  color: #f8f097;
-}
-
-#sentence-3 {
-  margin-left: 140px;
 }
 
 #title {
@@ -217,7 +208,7 @@ p {
 
     .dev.one {
       margin-right: 10vw;
-      margin-left: 40px;
+      margin-left: 30px;
     }
     
     .dev.two {
@@ -314,7 +305,42 @@ p {
 
   .devs {
     padding-bottom: 10px;
+
+    & img {
+      width: 80px;
+    }
   }
+
+}
+
+@media screen and (max-width: 590px) {
+
+header {
+  padding-left: 15px;
+  button {
+    width: 100px;
+    margin-right: 20px;
+
+    & a {
+      font-size: 25px;
+
+      & span {
+        display: none;
+      }
+    }
+
+  }
+}
+
+#sentence-1, #sentence-2, #sentence-3 {
+  margin-left: 0;
+}
+
+#sentence-3 {
+  margin-right: 20px;
+  margin-left: 10px;
+  font-size: 70px;
+}
 
 }
 

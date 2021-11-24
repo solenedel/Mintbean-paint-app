@@ -5,7 +5,7 @@ const LandingPage = ({className}) => {
     <div id="landing-page" className={className}>
       <header>
         <div id="title">Pintura</div>
-        <button><a href="/paint">start painting</a></button>
+        <button><a href="/paint">start <span>painting</span></a></button>
       </header>
 
       <div className="tagline">
