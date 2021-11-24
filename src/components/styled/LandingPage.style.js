@@ -29,12 +29,17 @@ header {
 }
 
 .tagline {
-  margin-left: 40px;
+  margin-right: 10px;
 }
 
 #sentence-1, #sentence-2 {
   margin-bottom: 40px;
   color: #f8f097;
+  margin-left: 40px;
+}
+
+#sentence-3 {
+  text-align: center;
 }
 
 #title {
@@ -347,13 +352,14 @@ header {
 
 
 #sentence-1, #sentence-2, #sentence-3 {
-  margin-left: 0;
+  margin-left: 50px;
 }
 
 #sentence-3 {
   margin-right: 20px;
-  margin-left: 10px;
+  margin-left: 30px;
   font-size: 70px;
+  text-align: left;
 }
 
 }
