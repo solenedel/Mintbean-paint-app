@@ -282,7 +282,7 @@ p {
 
     .warning {
       /* border: solid red 3px; */
-      margin: 50px 80px 0 80px;
+      margin: 5vw 80px 0 5vw;
       line-height: 40px;
       font-size: 22px;
 
@@ -331,6 +331,20 @@ header {
 
   }
 }
+
+& div.warning {
+    font-size: 18px;
+    margin-left: 15vw;
+  }
+
+  #try-pintura {
+    margin-left: 15vw;
+
+    & a {
+      font-size: 22px;
+    }
+  }
+
 
 #sentence-1, #sentence-2, #sentence-3 {
   margin-left: 0;
