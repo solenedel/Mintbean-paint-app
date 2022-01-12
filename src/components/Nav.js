@@ -8,10 +8,6 @@ const Nav = ({ className }) => {
           <img src="./images/rgb.png" alt="paint icon" />
           <h2 id="logo">Pintura</h2>
         </div>
-
-        <div id="quote">
-          <p>“Everything starts from a dot.” &nbsp;  ∼Vasily Kandinsky</p>
-        </div>
       </div>
     </nav>
    );

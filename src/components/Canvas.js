@@ -81,6 +81,7 @@ const Canvas = ({ canvasColor, setCanvasColor, className, brushSize, setBrushSiz
 
   return (
     <div id="canvas-and-dashboard">
+      <div className="notify-user"><i class="fas fa-exclamation-circle" /> This app is not designed for mobile phones or tablets.</div>
         <canvas
           id="my-canvas"
           className={className}

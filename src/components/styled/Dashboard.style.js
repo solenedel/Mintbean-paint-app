@@ -4,7 +4,6 @@ import { Dashboard } from "../Dashboard";
 
 
 export const StyledDashboard = styled(Dashboard)`
-  /* margin-bottom: 25px; */
   margin-top: 40px;
   display: flex;
   justify-content: center;
@@ -53,7 +52,7 @@ export const StyledDashboard = styled(Dashboard)`
 
  #save {
   color: ${colorVars.primaryLight};
-  border: solid 3px ${colorVars.primaryLight};
+  border: solid 2px ${colorVars.primaryLight};
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -69,7 +68,7 @@ export const StyledDashboard = styled(Dashboard)`
 
  #clear {
   color: ${colorVars.red};
-  border: solid 3px ${colorVars.red};
+  border: solid 2px ${colorVars.red};
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -84,7 +83,7 @@ export const StyledDashboard = styled(Dashboard)`
 
  #canvas-optn {
   color: ${colorVars.blue};
-  border: solid 3px ${colorVars.blue};
+  border: solid 2px ${colorVars.blue};
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -99,7 +98,7 @@ export const StyledDashboard = styled(Dashboard)`
 
  #brush-color {
   color: ${colorVars.purple};
-  border: solid 3px ${colorVars.purple};
+  border: solid 2px ${colorVars.purple};
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;
@@ -114,7 +113,7 @@ export const StyledDashboard = styled(Dashboard)`
 
  #brush-size {
   color: ${colorVars.orange};
-  border: solid 3px ${colorVars.orange};
+  border: solid 2px ${colorVars.orange};
   transition: color 0.5s;
   transition: background 0.5s;
   background: black;

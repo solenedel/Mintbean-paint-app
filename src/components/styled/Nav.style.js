@@ -39,9 +39,6 @@ export const StyledNav = styled(Nav)`
     margin-left: 50px;
   }
 
-  #quote {
-    margin-left: 100px;
-  }
 
   img {
     width: 100px;

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { colorVars } from './css-variables';
+import { colorVars, fonts } from './css-variables';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -27,7 +27,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* border: solid red 3px; */
+}
+
+div.notify-user {
+  font-family: ${fonts.mainFont};
+  font-style: italic;
+  margin-top: 20px;
+  font-size: 20px;
+  margin-left: 30px;
 }
 
 `;
