@@ -7,9 +7,9 @@ Pintura is a simple front-end only paint app. Coose the canvas color, brush colo
 - The drawing functionality only works properly in desktop and laptop computers.
 
 
-### The deployed website is [here](https://pintura-mintbean.herokuapp.com/)
+### The deployed website is [here](https://pintura-mintbean.herokuapp.com/paint)
 
-### The landing page is [here](https://pintura-mintbean.herokuapp.com/landing-page)
+### The landing page is [here](https://pintura-mintbean.herokuapp.com/)
 
 ![screenshot](./public/images/screenshot-1.png)
 
